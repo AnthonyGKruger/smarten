@@ -91,10 +91,10 @@ const DesktopBanner = () => {
 
       <div
         className={
-          "w-[1453px] h-[90px]  absolute mt-[610px] -skew-y-2 text-white blur-2xl"
+          "w-[1453px] h-[90px]  absolute mt-[610px] -skew-y-2 text-white bg-transparent border-2 border-[#6D44F4] bg-slate-600 mix-blend-color-none"
         }
       >
-        <div className=" px-6 m-auto">
+        <div className=" px-6 m-auto ">
           <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
             <div className="col-span-4 lg:col-span-3 flex items-center pt-5">
               <img src={star} alt={"star"} />{" "}
