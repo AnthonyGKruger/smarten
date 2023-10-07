@@ -5,12 +5,12 @@
 /*Installing fonts as per spec*/
 @font-face {
   font-family: "Lato";
-  src: url("./assets/Lato/Lato-Regular.ttf");
+  src: url("assets/fonts/Lato/Lato-Regular.ttf");
 }
 
 @font-face {
   font-family: "Ondo";
-  src: url("./assets/OndoFont/FONTSPRINGDEMO-OndoRegular.ttf");
+  src: url("assets/fonts/OndoFont/FONTSPRINGDEMO-OndoRegular.ttf");
 }
 
 .logo-gradient{

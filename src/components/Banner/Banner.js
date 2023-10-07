@@ -1,9 +1,9 @@
-import BannerActions from "./Banner/BannerActions";
-import BannerStats from "./Banner/BannerStats";
-import star from "../assets/Star 1.svg";
-import bannerImage from "../assets/banner-image.png";
-import MobileBannerActions from "./Banner/MobileBannerActions";
-import MobileBannerStats from "./Banner/MobileBannerStats";
+import BannerActions from "./BannerActions";
+import BannerStats from "./BannerStats";
+import star from "../../assets/Star 1.svg";
+import bannerImage from "../../assets/banner/banner-image.png";
+import MobileBannerActions from "./MobileBannerActions";
+import MobileBannerStats from "./MobileBannerStats";
 
 const Banner = () => {
   return (
@@ -60,8 +60,8 @@ const Banner = () => {
           </div>
 
           <div
-            className={`xl:w-[1453px] lg:w-[1024px] md:w-[768px] xl:h-[90px] lg:h-[70px]  absolute xl:mt-[610px] lg:mt-[550px] md:mt-[590px] mt-[600px] -skew-y-2 text-white  border-2 border-[#6D44F4] 
-        bg-gradient-to-t from-[#FFFFFF66] to-[#D9D9D933] backdrop-blur-[25px]  isolate`}
+            className={`xl:w-[1453px] lg:w-[1024px] md:w-[768px] xl:h-[90px] lg:h-[70px]  absolute xl:mt-[610px] lg:mt-[550px] md:mt-[590px] mt-[630px] -skew-y-2 text-white  border-2 border-[#6D44F4] 
+        bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px]  isolate`}
           >
             <div className=" px-6 m-auto ">
               <div className="grid grid-cols-12 md:gap-6 md:grid-cols-12 lg:grid-cols-12">
@@ -114,7 +114,7 @@ const Banner = () => {
             src={bannerImage}
             alt={"banner"}
             className={
-              "mix-blend-color-dodge lg:w-screen lg:h-full md:h-full h-4/6 w-full md:aspect-video object-cover md:mt-[10px] mt-[220px] lg:mt-0 "
+              "mix-blend-color-dodge lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:mt-[10px] mt-[240px] lg:mt-0 object-cover object-right"
             }
           />
         </div>
