@@ -77,7 +77,7 @@ const Nav = () => {
               ></span>
               <span
                 aria-hidden="true"
-                className="absolute block h-0.5 w-6 transform rounded-full bg-white transition duration-300"
+                className="ml-2 absolute block h-0.5 w-4/6 transform rounded-full bg-white transition duration-300"
               ></span>
               <span
                 aria-hidden="true"
@@ -91,7 +91,7 @@ const Nav = () => {
             aria-label="Select page"
             className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-slate-600/50 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
               isToggleOpen
-                ? "visible opacity-100 backdrop-blur-sm"
+                ? "visible opacity-100 backdrop-blur-sm pt-20"
                 : "invisible opacity-0"
             }`}
           >
@@ -154,6 +154,18 @@ const Nav = () => {
                 href="http://localhost:3000"
               >
                 <span>About</span>
+              </a>
+            </li>
+            <li role="none" className="flex items-stretch">
+              <a
+                href="http://localhost:3000"
+                className={`${navItemClasses} lg:invisible visible`}
+              >
+                <img
+                  src={cartIcon}
+                  alt={"cart icon"}
+                  className={"h-4 lg:invisible visible"}
+                />
               </a>
             </li>
           </ul>

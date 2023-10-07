@@ -23,7 +23,7 @@ function App() {
     // </div>
     <>
       <Header />
-      <main>
+      <main className={"bg-[#2D1E6B]"}>
         <Banner />
       </main>
     </>
