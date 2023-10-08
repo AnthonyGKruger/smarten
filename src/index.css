@@ -25,6 +25,20 @@
   border-style: solid;
 }
 
+@media  (max-width:1024px){
+  .glide__slide--active > img {
+    height:194px;
+    width:306px;
+  }
+}
+
+@media  (min-width:1024px ){
+  .glide__slide--active > img {
+    height:417px !important;
+    width:658px !important;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
