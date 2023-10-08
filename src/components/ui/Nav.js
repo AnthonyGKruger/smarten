@@ -1,6 +1,6 @@
 import { useState } from "react";
-import cartIcon from "../../assets/nav/cart-icon.svg";
-import navIcon from "../../assets/nav/Vector.svg";
+// import cartIcon from "../../../public/assets/nav/cart-icon.svg";
+// import navIcon from "../../../public/assets/nav/Vector.svg";
 const Nav = () => {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
 
@@ -22,7 +22,7 @@ const Nav = () => {
             className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
             href="http://localhost:3000"
           >
-            <img src={navIcon} alt={"nav icon"} />
+            <img src={"/assets/nav/Vector.svg"} alt={"nav icon"} />
 
             <span className={"font-ondo font-[800] text-2xl"}>board</span>
           </a>
@@ -131,7 +131,7 @@ const Nav = () => {
                 className={`${navItemClasses} lg:invisible visible`}
               >
                 <img
-                  src={cartIcon}
+                  src={"/assets/nav/cart-icon.svg"}
                   alt={"cart icon"}
                   className={"h-4 lg:invisible visible"}
                 />
@@ -145,7 +145,7 @@ const Nav = () => {
               className="relative inline-flex h-10 w-10 items-center justify-center text-lg invisible lg:visible"
             >
               <img
-                src={cartIcon}
+                src={"/assets/nav/cart-icon.svg"}
                 alt={"cart icon"}
                 className={"h-4 invisible lg:visible"}
               />

@@ -1,4 +1,4 @@
-const GradientBorderButton = ({ textContent }) => {
+const GradientBorderButton = ({ textContent, textColor }) => {
   return (
     <button
       className={
@@ -7,9 +7,11 @@ const GradientBorderButton = ({ textContent }) => {
     >
       <div className={"skew-x-12 bg-transparent"}>
         <span
-          className={
-            "bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] text-transparent bg-clip-text xl:text-[20px] lg:text-[17px] text-[11.897px]"
-          }
+          className={`${
+            textColor
+              ? textColor
+              : "bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] text-transparent bg-clip-text"
+          } xl:text-[20px] lg:text-[17px] text-[11.897px]`}
         >
           {textContent}
         </span>

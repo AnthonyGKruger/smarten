@@ -107,9 +107,9 @@
 
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
-import gameImage1 from "../../assets/game-carousel-image-1.png";
-import gameImage2 from "../../assets/game-carousel-image-2.png";
-import gameImage3 from "../../assets/game-carousel-image-3.png";
+// import gameImage1 from "../../../public/assets/game-carousel-image-1.png";
+// import gameImage2 from "../../../public/assets/game-carousel-image-2.png";
+// import gameImage3 from "../../../public/assets/game-carousel-image-3.png";
 
 const Carousel = () => {
   useEffect(() => {
@@ -147,21 +147,21 @@ const Carousel = () => {
           <ul className="whitespace-no-wrap flex-no-wrap relative flex w-full overflow-hidden p-0">
             <li className="carousel-item">
               <img
-                src={gameImage1}
+                src={"/assets/carousel/game-carousel-image-1.png"}
                 alt={"game"}
                 className="object-cover xl:h-[366px] xl:w-[451px] h-[188px] w-[232px] transition-all ease-in-out"
               />
             </li>
             <li className="carousel-item">
               <img
-                src={gameImage2}
+                src={"/assets/carousel/game-carousel-image-2.png"}
                 alt={"game"}
                 className="object-cover xl:h-[366px] xl:w-[451px] h-[188px] w-[232px] transition-all ease-in-out"
               />
             </li>
             <li className="carousel-item">
               <img
-                src={gameImage3}
+                src={"/assets/carousel/game-carousel-image-3.png"}
                 alt={"game"}
                 className="object-cover xl:h-[366px] xl:w-[451px] h-[188px] w-[232px] transition-all ease-in-out"
               />

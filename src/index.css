@@ -5,16 +5,16 @@
 /*Installing fonts as per spec*/
 @font-face {
   font-family: "Lato";
-  src: url("assets/fonts/Lato/Lato-Regular.ttf");
+  src: url("../public/assets/fonts/Lato/Lato-Regular.ttf");
 }
 
 @font-face {
   font-family: "Ondo";
-  src: url("assets/fonts/OndoFont/FONTSPRINGDEMO-OndoRegular.ttf");
+  src: url("../public/assets/fonts/OndoFont/FONTSPRINGDEMO-OndoRegular.ttf");
 }
 
 .logo-gradient{
-  fill:  url("assets/logo-gradient.png");
+  fill:  url("../public/assets/logo-gradient.png");
 }
 
 /* Custom CSS for the gradient border on certain buttons*/

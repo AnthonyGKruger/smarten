@@ -1,7 +1,7 @@
 import BannerActions from "./BannerActions";
 import BannerStats from "./BannerStats";
-import star from "../../assets/Star 1.svg";
-import bannerImage from "../../assets/banner/banner-image.png";
+// import star from "../../../public/assets/Star 1.svg";
+// import bannerImage from "../../../public/assets/banner/banner-image.png";
 import MobileBannerActions from "./MobileBannerActions";
 import MobileBannerStats from "./MobileBannerStats";
 
@@ -66,7 +66,11 @@ const Banner = () => {
             <div className=" px-6 m-auto ">
               <div className="grid grid-cols-12 md:gap-6 md:grid-cols-12 lg:grid-cols-12">
                 <div className="col-span-3 lg:col-span-3 flex items-center xl:pt-5 lg:pt-2">
-                  <img src={star} alt={"star"} className={"h-1/2"} />{" "}
+                  <img
+                    src={"/assets/Star 1.svg"}
+                    alt={"star"}
+                    className={"h-1/2"}
+                  />{" "}
                   <span
                     className={
                       "uppercase font-extrabold xl:text-[20px] lg:text-[17px] md:text-[10px] text-[8px]"
@@ -76,7 +80,11 @@ const Banner = () => {
                   </span>
                 </div>
                 <div className="col-span-3 lg:col-span-3 flex items-center xl:pt-5 lg:pt-2">
-                  <img src={star} alt={"star"} className={"h-1/2"} />{" "}
+                  <img
+                    src={"/assets/Star 1.svg"}
+                    alt={"star"}
+                    className={"h-1/2"}
+                  />{" "}
                   <span
                     className={
                       "uppercase font-extrabold xl:text-[20px] lg:text-[17px] md:text-[10px] text-[8px]"
@@ -86,7 +94,11 @@ const Banner = () => {
                   </span>
                 </div>
                 <div className="col-span-3 lg:col-span-3 flex items-center xl:pt-5 lg:pt-2">
-                  <img src={star} alt={"star"} className={"h-1/2"} />{" "}
+                  <img
+                    src={"/assets/Star 1.svg"}
+                    alt={"star"}
+                    className={"h-1/2"}
+                  />{" "}
                   <span
                     className={
                       "uppercase font-extrabold xl:text-[20px] lg:text-[17px] md:text-[10px] text-[8px]"
@@ -97,7 +109,11 @@ const Banner = () => {
                   </span>
                 </div>
                 <div className="col-span-3 lg:col-span-3 flex items-center xl:pt-5 lg:pt-2">
-                  <img src={star} alt={"star"} className={"h-1/2"} />{" "}
+                  <img
+                    src={"/assets/Star 1.svg"}
+                    alt={"star"}
+                    className={"h-1/2"}
+                  />{" "}
                   <span
                     className={
                       "uppercase font-extrabold xl:text-[20px] lg:text-[17px] md:text-[10px] text-[8px]"
@@ -111,7 +127,7 @@ const Banner = () => {
           </div>
 
           <img
-            src={bannerImage}
+            src={"/assets/banner/banner-image.png"}
             alt={"banner"}
             className={
               "mix-blend-color-dodge lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:mt-[10px] mt-[240px] lg:mt-0 object-cover object-right"

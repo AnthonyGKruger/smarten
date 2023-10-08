@@ -1,0 +1,44 @@
+[
+        {
+                "name": "Core Philosophies",
+                "author": "Cameron Williamson",
+                "avatar": "/assets/filters/Ellipse 5.svg",
+                "publisher": "Gillete",
+                "image": "/assets/filters/filters-image-1.png"
+        },
+        {
+                "name": "Core Philosophies",
+                "author": "Diaane Russel",
+                "avatar": "/assets/filters/Ellipse 6.svg",
+                "publisher": "Louis Vuitton",
+                "image": "/assets/filters/filters-image-2.png"
+        },
+        {
+                "name": "Core Philosophies",
+                "author": "Jane Cooper",
+                "avatar": "/assets/filters/Ellipse 7.svg",
+                "publisher": "MasterCard",
+                "image": "/assets/filters/filters-image-3.png"
+        },
+        {
+                "name": "Core Philosophies",
+                "author": "Cody Fisher",
+                "avatar": "/assets/filters/Ellipse 8.svg",
+                "publisher": "The Walt Disney Company",
+                "image": "/assets/filters/filters-image-4.png"
+        },
+        {
+                "name": "Core Philosophies",
+                "author": "Wade Warren",
+                "avatar": "/assets/filters/Ellipse 9.svg",
+                "publisher": "Gillete",
+                "image": "/assets/filters/filters-image-5.png"
+        },
+        {
+                "name": "Core Philosophies",
+                "author": "Robert Fox",
+                "avatar": "/assets/filters/Ellipse 10.svg",
+                "publisher": "L'Oreal",
+                "image": "/assets/filters/filters-image-6.png"
+        }
+]

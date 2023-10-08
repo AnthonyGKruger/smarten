@@ -1,7 +1,7 @@
-import callToActionImage from "./cta-image.png";
-import cardBg from "./Rectangle.png";
+// import callToActionImage from "../../../public/assets/cta/cta-image.png";
+// import cardBg from "../../../public/assets/cta/Rectangle.png";
 import GradientBorderButton from "../ui/GradientBorderButton";
-import star from "../../assets/Star 1.svg";
+// import star from "../../../public/assets/Star 1.svg";
 const CallToAction = () => {
   return (
     <section className={"py-28 bg-[#2D1E6B] hidden md:block overflow-hidden"}>
@@ -15,14 +15,16 @@ const CallToAction = () => {
           <div className="col-span-4 md:col-span-8 lg:col-span-12">
             <div
               className={`flex flex-col  rounded-lg shadow-sm text-white shadow-slate-900 sm:flex-row`}
-              style={{ backgroundImage: `url(${cardBg})` }}
+              style={{ backgroundImage: `url("/assets/cta/Rectangle.png")` }}
             >
               <figure className="flex-1">
                 <div className={"relative"}>
                   <div
                     className="aspect-square object-contain absolute h-[639px] w-[725px] z-50 -top-[125px] -left-1.5"
                     // className="object-cover min-h-full aspect-auto"
-                    style={{ backgroundImage: `url(${callToActionImage})` }}
+                    style={{
+                      backgroundImage: `url("/assets/cta/cta-image.png")`,
+                    }}
                   ></div>
                 </div>
               </figure>
@@ -62,19 +64,35 @@ const CallToAction = () => {
         className={`inline-flex items-center gap-x-14 xl:h-[50px] w-[1989px] -ml-[200px] mt-16 text-white text-[34.039px] `}
       >
         <div className=" inline-flex ">
-          <img src={star} alt={"star"} className={"h-1/2 mr-6"} />{" "}
+          <img
+            src={"/assets/Star 1.svg"}
+            alt={"star"}
+            className={"h-1/2 mr-6"}
+          />{" "}
           <span className={"uppercase font-extrabold "}>Gaming Spanning</span>
         </div>
         <div className=" inline-flex ">
-          <img src={star} alt={"star"} className={"h-1/2 mr-6"} />{" "}
+          <img
+            src={"/assets/Star 1.svg"}
+            alt={"star"}
+            className={"h-1/2 mr-6"}
+          />{" "}
           <span className={"uppercase font-extrabold "}>Action - Packed</span>
         </div>
         <div className=" inline-flex ">
-          <img src={star} alt={"star"} className={"h-1/2 mr-6"} />{" "}
+          <img
+            src={"/assets/Star 1.svg"}
+            alt={"star"}
+            className={"h-1/2 mr-6"}
+          />{" "}
           <span className={"uppercase font-extrabold "}> Mind - Bending</span>
         </div>
         <div className=" inline-flex ">
-          <img src={star} alt={"star"} className={"h-1/2 mr-6"} />{" "}
+          <img
+            src={"/assets/Star 1.svg"}
+            alt={"star"}
+            className={"h-1/2 mr-6"}
+          />{" "}
           <span className={"uppercase font-extrabold "}>
             Collection og games
           </span>

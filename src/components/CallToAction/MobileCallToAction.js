@@ -1,6 +1,6 @@
-import callToActionImage from "./cta-image.png";
+// import callToActionImage from "../../../public/assets/cta/cta-image.png";
 import GradientBorderButton from "../ui/GradientBorderButton";
-import star from "../../assets/Star 1.svg";
+// import star from "../../../public/assets/Star 1.svg";
 
 const MobileCallToAction = () => {
   return (
@@ -41,7 +41,7 @@ const MobileCallToAction = () => {
               <figure className="flex-1">
                 <div className={"relative h-[400px] w-full"}>
                   <img
-                    src={callToActionImage}
+                    src={"/assets/cta/cta-image.png"}
                     alt="cta"
                     className="object-cover absolute h-[431px] w-[362px] -top-[30px] "
                   />
@@ -56,26 +56,42 @@ const MobileCallToAction = () => {
         className={`inline-flex items-center gap-x-14 h-[50px] w-[1989px] -ml-[300px] mt-16 text-white  overflow-hidden`}
       >
         <div className=" inline-flex ">
-          <img src={star} alt={"star"} className={"h-1/4 mr-6"} />{" "}
+          <img
+            src={"/assets/Star 1.svg"}
+            alt={"star"}
+            className={"h-1/4 mr-6"}
+          />{" "}
           <span className={"uppercase font-extrabold text-[18px]"}>
             Gaming Spanning
           </span>
         </div>
         <div className=" inline-flex ">
-          <img src={star} alt={"star"} className={"h-1/4 mr-6"} />{" "}
+          <img
+            src={"/assets/Star 1.svg"}
+            alt={"star"}
+            className={"h-1/4 mr-6"}
+          />{" "}
           <span className={"uppercase font-extrabold text-[18px]"}>
             Action - Packed
           </span>
         </div>
         <div className=" inline-flex ">
-          <img src={star} alt={"star"} className={"h-1/4 mr-6"} />{" "}
+          <img
+            src={"/assets/Star 1.svg"}
+            alt={"star"}
+            className={"h-1/4 mr-6"}
+          />{" "}
           <span className={"uppercase font-extrabold text-[18px]"}>
             {" "}
             Mind - Bending
           </span>
         </div>
         <div className=" inline-flex ">
-          <img src={star} alt={"star"} className={"h-1/4 mr-6"} />{" "}
+          <img
+            src={"/assets/Star 1.svg"}
+            alt={"star"}
+            className={"h-1/4 mr-6"}
+          />{" "}
           <span className={"uppercase font-extrabold text-[18px]"}>
             Collection og games
           </span>
