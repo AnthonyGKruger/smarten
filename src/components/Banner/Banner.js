@@ -1,7 +1,5 @@
 import BannerActions from "./BannerActions";
 import BannerStats from "./BannerStats";
-// import star from "../../../public/assets/Star 1.svg";
-// import bannerImage from "../../../public/assets/banner/banner-image.png";
 import MobileBannerActions from "./MobileBannerActions";
 import MobileBannerStats from "./MobileBannerStats";
 

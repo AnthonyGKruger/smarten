@@ -1,6 +1,4 @@
-// import callToActionImage from "../../../public/assets/cta/cta-image.png";
 import GradientBorderButton from "../ui/GradientBorderButton";
-// import star from "../../../public/assets/Star 1.svg";
 
 const MobileCallToAction = () => {
   return (

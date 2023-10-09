@@ -1,7 +1,5 @@
-// import callToActionImage from "../../../public/assets/cta/cta-image.png";
-// import cardBg from "../../../public/assets/cta/Rectangle.png";
 import GradientBorderButton from "../ui/GradientBorderButton";
-// import star from "../../../public/assets/Star 1.svg";
+
 const CallToAction = () => {
   return (
     <section className={"py-28 bg-[#2D1E6B] hidden md:block overflow-hidden"}>
@@ -21,7 +19,6 @@ const CallToAction = () => {
                 <div className={"relative"}>
                   <div
                     className="aspect-square object-contain absolute h-[639px] w-[725px] z-50 -top-[125px] -left-1.5"
-                    // className="object-cover min-h-full aspect-auto"
                     style={{
                       backgroundImage: `url("/assets/cta/cta-image.png")`,
                     }}
