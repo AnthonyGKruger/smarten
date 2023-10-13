@@ -11,7 +11,7 @@ const Nav = () => {
       <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
         <nav
           aria-label="main navigation"
-          className="flex h-[5.5rem] items-stretch justify-between font-medium text-white"
+          className="flex h-24 items-stretch justify-between font-medium text-white"
           role="navigation"
         >
           <a
@@ -23,7 +23,7 @@ const Nav = () => {
           >
             <img src={"/assets/icon.png"} alt={"nav icon"} />
 
-            <span className={"font-ondo font-[800] text-2xl"}>board</span>
+            <span className={"font-ondo font-extrabold text-2xl"}>board</span>
           </a>
 
           <button
@@ -137,7 +137,7 @@ const Nav = () => {
                 <div className="absolute bottom-5 left-11 mt-2 mr-2">
                   <img
                     src="/assets/nav/Ellipse%201.svg"
-                    alt="Badge 1"
+                    alt="cart icon bagde"
                     className="h-1.5 w-1.5 xl:h-1.5 xl:w-1.5 mr-2 lg:invisible visible"
                   />
                 </div>
