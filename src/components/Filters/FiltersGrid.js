@@ -24,7 +24,7 @@ const FiltersGrid = () => {
       </div>
       <div
         className={
-          "absolute rounded-full bg-[#DD00B8] w-[521px] h-[521px] blur-[446.1348876953125px] sm:visible invisible -left-[250px] top-[4000px]"
+          "absolute rounded-full bg-[#DD00B8] w-[521px] h-[521px] blur-[446.1348876953125px] sm:visible invisible -left-[250px] top-[4000px] z-10"
         }
       ></div>
     </section>

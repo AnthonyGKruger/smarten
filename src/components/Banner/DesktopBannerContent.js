@@ -15,7 +15,7 @@ const DesktopBannerContent = () => {
         }
       ></div>
       <div
-        className={`xl:w-[110em] xl:-ml-[12em] lg:w-[80em] w-[50em] lg:-ml-[8em] md:w-[60em] md:-ml-[6em] -ml-[12em] xl:h-[5.625em] lg:h-[4.375em] h-[4.375em] absolute xl:mt-[44.4em] lg:mt-[39.75em] md:mt-[28em] mt-[39.5em] -skew-y-2 text-white border-2 border-[#6D44F4] bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.5625rem] isolate z-30`}
+        className={`2xl:w-[150em] xl:w-[110em] xl:-ml-[12em] lg:w-[80em] w-[60em] lg:-ml-[8em] md:w-[60em] md:-ml-[6em] -ml-[12em] xl:h-[5.625em] lg:h-[4.375em] h-[4.375em] absolute 2xl:mt-[56.5em] xl:mt-[44.4em] lg:mt-[39.75em] md:mt-[28em] mt-[39.5em] -skew-y-2 text-white border-2 border-slate-700 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px] isolate z-50`}
       >
         <div className="px-[0.375rem] m-auto h-full">
           <div className="grid grid-cols-12  md:grid-cols-12 lg:grid-cols-12 place-items-center h-full">

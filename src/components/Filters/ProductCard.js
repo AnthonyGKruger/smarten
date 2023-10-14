@@ -1,7 +1,7 @@
 const ProductCard = ({ name, author, avatar, publisher, image }) => {
   return (
     <div className="col-span-4">
-      <div className=" rounded-lg text-white shadow shadow-slate-500 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px]">
+      <div className="relative rounded-lg text-white shadow shadow-slate-500 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px] z-50">
         <figure className={"p-3"}>
           <img src={image} alt={name} className=" w-full" />
         </figure>

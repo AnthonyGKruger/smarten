@@ -1,15 +1,16 @@
 const Footer = () => {
   return (
-    <footer className="w-full text-white bg-[#2D1E6B] relative xl:h-[529px] h-[854px] font-lato ">
+    <footer className="w-full text-white bg-[#2D1E6B] relative 2xl:h-[44em] xl:h-[529px] lg:h-[529px] md:h-[50em] h-[60em] font-lato ">
       <img
         src={"/assets/footer/footer-image.png"}
         alt={"footer"}
         className={
-          "mix-blend-color-dodge absolute xl:object-contain h-full object-center object-cover"
+          "mix-blend-color-dodge absolute 2xl:object-contain xl:object-contain h-full 2xl:h-[44em] object-center object-cover"
+          // "mix-blend-color-dodge absolute 2xl:object-cover xl:object-contain h-full 2xl:h-[44em] object-center object-cover"
         }
       />
       <div
-        className={`absolute  -top-5 inline-flex items-center gap-x-14 xl:h-[100px] w-[1989px] -ml-[200px]  text-white xl:text-[34.039px]   bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[25px]`}
+        className={`absolute  -top-5 inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[100px] w-[1989px] 2xl:w-[3000px] 2xl:-ml-0 -ml-[200px]  text-white xl:text-[34.039px]   bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[25px]`}
       >
         <div className=" inline-flex ">
           <img
@@ -53,7 +54,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-      <div className=" xl:pt-52 pt-24 text-sm">
+      <div className="md:px-10 px-8 xl:px-0 xl:pt-52 pt-24 text-sm ">
         <div className="container mr-auto xl:ml-20 ml-5 xl:pr-52">
           <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
             <div
@@ -195,8 +196,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-x-12 gap-y-6 mt-6">
+      <div className="md:px-8 px-12 xl:py-0 md:py-14 2xl:pt-20 2xl:-ml-14">
+        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 gap-x-12 gap-y-6 mt-6">
           <div className="flex justify-center items-center">
             <img
               src={"/assets/footer/companies/Vector.svg"}

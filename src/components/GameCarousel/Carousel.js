@@ -7,7 +7,7 @@ const Carousel = () => {
             <img
               src={"/assets/carousel/game-carousel.png"}
               alt={"carousel"}
-              className={"w-96 xl:w-full"}
+              className={"w-full z-50 relative"}
             />
           </div>
         </div>

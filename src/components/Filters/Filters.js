@@ -3,7 +3,7 @@ import FiltersGrid from "./FiltersGrid";
 
 const Filters = () => {
   return (
-    <section>
+    <section className={"bg-[#2D1E6B]"}>
       <FiltersTitle />
       <FiltersGrid />
     </section>

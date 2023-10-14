@@ -2,9 +2,9 @@ import TestimonialCard from "./TestimonialCard";
 
 const TestimonialsCarousel = () => {
   return (
-    <section className={"py-10"}>
+    <section className={"py-10 bg-[#2D1E6B]"}>
       <div
-        className={`inline-flex items-center gap-x-14 xl:h-[50px] w-[1989px] -ml-[200px] mt-16 text-white text-[34.039px] `}
+        className={`inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[50px] w-[1989px] 2xl:w-[3000px] 2xl:-ml-0 -ml-[200px] mt-16 text-white text-[34.039px] `}
       >
         <div className=" inline-flex ">
           <img
@@ -42,7 +42,7 @@ const TestimonialsCarousel = () => {
         </div>
       </div>
       <div className="container xl:px-16 px-8 m-auto mt-28">
-        <div className="grid grid-cols-4 gap-8 gap-y-8 md:grid-cols-8 lg:grid-cols-12">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-8">
           <TestimonialCard
             review={
               "One of the standout features of this gaming website is its extensive library of game guides and tutorials. It has helped me level up my skills, conquer challenging quests, and discover hidden secrets within games. The guides are comprehensive, easy to follow, and have undoubtedly elevated my gaming performance."

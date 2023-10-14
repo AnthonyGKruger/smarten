@@ -4,10 +4,10 @@ const MobileCallToAction = () => {
   return (
     <section className={"py-14 bg-[#2D1E6B] block sm:hidden"}>
       <div className="container px-6 m-auto">
-        <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
-          <div className="col-span-4 md:col-span-8 lg:col-span-12">
+        <div className="grid grid-cols-4 gap-6">
+          <div className="col-span-4 ">
             <div
-              className={`flex flex-col  rounded-lg shadow-sm text-white shadow-slate-900 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px]`}
+              className={`flex flex-col overflow-visible rounded-lg shadow-sm text-white shadow-slate-900 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px]`}
             >
               <div className="flex-1 px-4 sm:mx-6 pt-14">
                 <header className="flex gap-4 mb-4">
