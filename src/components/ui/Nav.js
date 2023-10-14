@@ -155,7 +155,7 @@ const Nav = () => {
                 alt={"cart icon"}
                 className={"h-4 invisible lg:visible"}
               />
-              <div className="absolute xl:top-1.5 xl:-right-1.5 mt-2 mr-2">
+              <div className="absolute xl:top-4 xl:-right-1 lg:-right-1.5  mr-2">
                 <img
                   src="/assets/nav/Ellipse%201.svg"
                   alt="Badge 1"

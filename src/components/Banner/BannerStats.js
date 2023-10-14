@@ -1,6 +1,6 @@
 const BannerStats = () => {
   return (
-    <div className=" grid-cols-12 gap-6 md:grid-cols-12 lg:grid-cols-12 mt-5 xl:w-[31.25em] lg:w-[25em] w-[18.875em] hidden md:grid">
+    <div className=" grid-cols-12 gap-6 md:grid-cols-12 lg:grid-cols-12 mt-5 md:mt-2 xl:w-[31.25em] lg:w-[25em] w-[18.875em] hidden md:grid">
       <div className="col-span-4 text-center">
         <p className={"font-extrabold xl:text-[1.5rem] lg:text-[1.25rem]"}>
           300+
