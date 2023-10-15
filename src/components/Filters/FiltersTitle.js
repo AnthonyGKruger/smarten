@@ -1,9 +1,9 @@
 const FiltersTitle = () => {
   const gradientButtonClasses =
-    "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold xl:h-[74px] xl:w-[232px] lg:h-[54px] lg:w-[180px] md:h-[54px] md:w-[160px] h-[44.017px] w-full -skew-x-12 xl:text-[20px] text-xs";
+    "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold xl:h-[74px] xl:w-[232px] lg:h-[54px] lg:w-[180px] md:h-[54px] md:w-[160px] h-[44.017px] w-full -skew-x-12 xl:text-[20px] text-xs hover:scale-105 transition-all delay-100";
 
   const gradientBorderButtonClasses =
-    "uppercase text-center font-ondo font-extrabold xl:h-[74px] xl:w-[232px] lg:h-[54px] lg:w-[180px] md:h-[54px] md:w-[160px] h-[44.017px] w-full -skew-x-12 gradient-border text-xs";
+    "uppercase text-center font-ondo font-extrabold xl:h-[74px] xl:w-[232px] lg:h-[54px] lg:w-[180px] md:h-[54px] md:w-[160px] h-[44.017px] w-full -skew-x-12 gradient-border text-xs hover:scale-105 transition-all delay-100";
 
   return (
     <div className="container xl:px-44 px-5 m-auto mx-auto xl:py-14">

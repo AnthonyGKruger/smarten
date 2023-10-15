@@ -1,16 +1,16 @@
 const Footer = () => {
   return (
-    <footer className="w-full text-white bg-[#2D1E6B] relative 2xl:h-[44em] xl:h-[529px] lg:h-[529px] md:h-[50em] h-[60em] font-lato ">
+    <footer className="w-full text-white bg-[#2D1E6B] relative 2xl:h-[44em] xl:h-[529px] lg:h-[529px] md:h-[50em] h-[60em] font-lato mix-blend-color-dodge">
       <img
         src={"/assets/footer/footer-image.png"}
         alt={"footer"}
         className={
-          "mix-blend-color-dodge absolute 2xl:object-contain xl:object-contain h-full 2xl:h-[44em] object-center object-cover"
+          " absolute 2xl:object-contain xl:object-contain h-full 2xl:h-[44em] object-center object-cover -z-50"
           // "mix-blend-color-dodge absolute 2xl:object-cover xl:object-contain h-full 2xl:h-[44em] object-center object-cover"
         }
       />
       <div
-        className={`absolute  -top-5 inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[100px] w-[1989px] 2xl:w-[3000px] 2xl:-ml-0 -ml-[200px]  text-white xl:text-[34.039px]   bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[25px]`}
+        className={`absolute inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[100px] w-[1989px] 2xl:w-[3000px] 2xl:-ml-0 -ml-[200px]  text-white xl:text-[34.039px]   bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[25px]`}
       >
         <div className=" inline-flex ">
           <img
@@ -196,7 +196,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="md:px-8 px-12 xl:py-0 md:py-14 2xl:pt-20 2xl:-ml-14">
+      <div className="md:px-8 px-12 xl:py-0 md:py-14 2xl:pt-20 2xl:-ml-14 z-50">
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 gap-x-12 gap-y-6 mt-6">
           <div className="flex justify-center items-center">
             <img
@@ -238,16 +238,32 @@ const Footer = () => {
               <div className="col-span-4">
                 <div className={"grid grid-cols-4 gap-2"}>
                   <div className={"col-span-1"}>
-                    <img src={"/assets/footer/1.svg"} alt={"social-icon"} />
+                    <img
+                      src={"/assets/footer/1.svg"}
+                      alt={"social-icon"}
+                      className={"hover:scale-105 transition-all delay-100"}
+                    />
                   </div>
                   <div className={"col-span-1"}>
-                    <img src={"/assets/footer/2.svg"} alt={"social-icon"} />
+                    <img
+                      src={"/assets/footer/2.svg"}
+                      alt={"social-icon"}
+                      className={"hover:scale-105 transition-all delay-100"}
+                    />
                   </div>
                   <div className={"col-span-1"}>
-                    <img src={"/assets/footer/3.svg"} alt={"social-icon"} />
+                    <img
+                      src={"/assets/footer/3.svg"}
+                      alt={"social-icon"}
+                      className={"hover:scale-105 transition-all delay-100"}
+                    />
                   </div>
                   <div className={"col-span-1"}>
-                    <img src={"/assets/footer/4.svg"} alt={"social-icon"} />
+                    <img
+                      src={"/assets/footer/4.svg"}
+                      alt={"social-icon"}
+                      className={"hover:scale-105 transition-all delay-100"}
+                    />
                   </div>
                 </div>
               </div>
@@ -261,22 +277,39 @@ const Footer = () => {
           "absolute xl:bottom-8 bottom-2 xl:left-20 left-10 font-lato xl:text-xs text-sm "
         }
       >
+        `{" "}
         <div className="container xl:px-6 m-auto grid grid-cols-3 gap-2">
           <div className={"xl:col-span-1 col-span-3 hidden sm:grid"}>
             <div className="grid grid-cols-3 gap-6 ">
               <div className="col-span-4">
                 <div className={"grid grid-cols-4 gap-2"}>
                   <div className={"col-span-1"}>
-                    <img src={"/assets/footer/1.svg"} alt={"social-icon"} />
+                    <img
+                      src={"/assets/footer/1.svg"}
+                      alt={"social-icon"}
+                      className={"hover:scale-110 transition-all delay-100"}
+                    />
                   </div>
                   <div className={"col-span-1"}>
-                    <img src={"/assets/footer/2.svg"} alt={"social-icon"} />
+                    <img
+                      src={"/assets/footer/2.svg"}
+                      alt={"social-icon"}
+                      className={"hover:scale-110 transition-all delay-100"}
+                    />
                   </div>
                   <div className={"col-span-1"}>
-                    <img src={"/assets/footer/3.svg"} alt={"social-icon"} />
+                    <img
+                      src={"/assets/footer/3.svg"}
+                      alt={"social-icon"}
+                      className={"hover:scale-110 transition-all delay-100"}
+                    />
                   </div>
                   <div className={"col-span-1"}>
-                    <img src={"/assets/footer/4.svg"} alt={"social-icon"} />
+                    <img
+                      src={"/assets/footer/4.svg"}
+                      alt={"social-icon"}
+                      className={"hover:scale-110 transition-all delay-100"}
+                    />
                   </div>
                 </div>
               </div>

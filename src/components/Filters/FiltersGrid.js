@@ -3,9 +3,10 @@ import ProductCard from "./ProductCard";
 
 const FiltersGrid = () => {
   console.log(productData);
-  const filterCards = productData.map((product) => {
+  const filterCards = productData.map((product, idx) => {
     return (
       <ProductCard
+        key={idx}
         name={product.name}
         author={product.author}
         avatar={product.avatar}
