@@ -1,16 +1,15 @@
 const Footer = () => {
   return (
-    <footer className="w-full text-white bg-[#2D1E6B] relative 2xl:h-[44em] xl:h-[529px] lg:h-[529px] md:h-[50em] h-[60em] font-lato mix-blend-color-dodge">
+    <footer className="w-full text-white bg-[#2D1E6B] relative 2xl:h-[44em] lg:h-[33.063em] md:h-[50em] h-[60em] font-lato mix-blend-color-dodge">
       <img
         src={"/assets/footer/footer-image.png"}
         alt={"footer"}
         className={
           " absolute 2xl:object-contain xl:object-contain h-full 2xl:h-[44em] object-center object-cover -z-50"
-          // "mix-blend-color-dodge absolute 2xl:object-cover xl:object-contain h-full 2xl:h-[44em] object-center object-cover"
         }
       />
       <div
-        className={`absolute inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[100px] w-[1989px] 2xl:w-[3000px] 2xl:-ml-0 -ml-[200px]  text-white xl:text-[34.039px]   bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[25px]`}
+        className={`absolute inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[2.125em] w-[124.313em] 2xl:w-[187.5em] 2xl:-ml-0 -ml-[7em]  text-white xl:text-[2.127em]   bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[1.563em]`}
       >
         <div className=" inline-flex ">
           <img
@@ -70,7 +69,9 @@ const Footer = () => {
               >
                 <img src={"/assets/icon.png"} alt={"nav icon"} />
 
-                <span className={"font-ondo font-[800] text-3xl text-white"}>
+                <span
+                  className={"font-ondo font-extrabold text-3xl text-white"}
+                >
                   board
                 </span>
               </a>

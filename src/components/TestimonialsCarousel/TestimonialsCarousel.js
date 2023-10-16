@@ -4,7 +4,7 @@ const TestimonialsCarousel = () => {
   return (
     <section className={"py-10 bg-[#2D1E6B]"}>
       <div
-        className={`inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[50px] w-[1989px] 2xl:w-[3000px] 2xl:-ml-0 -ml-[200px] mt-16 text-white text-[34.039px] `}
+        className={`inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[3.125em] w-[124.313em] 2xl:w-[187.5em] 2xl:-ml-0 -ml-[12.5em] mt-16 text-white text-[2.127rem] `}
       >
         <div className=" inline-flex ">
           <img

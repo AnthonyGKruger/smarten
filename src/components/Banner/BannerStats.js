@@ -1,4 +1,14 @@
+import { useState } from "react";
+
 const BannerStats = () => {
+  const [uniqueStyleStats, setUniqueStyleStats] = useState(0);
+  const [projectsFinishedStats, setProjectsFinishedStats] = useState(0);
+  const [happyCustomerStats, setHappyCustomerStats] = useState(0);
+
+  const countUp = (limit, stateSetter) => {
+    for (let i = 0; i === limit; i++) {}
+  };
+
   return (
     <div className=" grid-cols-12 gap-6 md:grid-cols-12 lg:grid-cols-12 mt-5 md:mt-2 xl:w-[31.25em] lg:w-[25em] w-[18.875em] hidden md:grid">
       <div className="col-span-4 text-center">

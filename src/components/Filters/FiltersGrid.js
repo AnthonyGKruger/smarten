@@ -1,8 +1,8 @@
 import productData from "./filters-data.json";
 import ProductCard from "./ProductCard";
+import RadialBlurEffect from "../ui/RadialBlurEffect";
 
 const FiltersGrid = () => {
-  console.log(productData);
   const filterCards = productData.map((product, idx) => {
     return (
       <ProductCard
@@ -23,11 +23,14 @@ const FiltersGrid = () => {
           {filterCards}
         </div>
       </div>
-      <div
-        className={
-          "absolute rounded-full bg-[#DD00B8] w-[521px] h-[521px] blur-[446.1348876953125px] sm:visible invisible -left-[250px] top-[4000px] z-10"
-        }
-      ></div>
+      <RadialBlurEffect
+        blur={"blur-[27.883em]"}
+        height={"h-[32.563em]"}
+        horizontalOffSet={"-left-[15.625em]"}
+        verticalOffSet={"top-[250em]"}
+        zIndex={"z-10"}
+        width={"w-[32.563em]"}
+      />
     </section>
   );
 };

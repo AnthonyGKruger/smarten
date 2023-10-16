@@ -1,7 +1,7 @@
 const TestimonialCard = ({ review, avatar, author, company }) => {
   return (
     <div className="col-span-2 relative xl:mt-0 mt-10">
-      <div className=" rounded-lg text-white shadow shadow-slate-500 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px] z-30 relative">
+      <div className=" rounded-lg text-white shadow shadow-slate-500 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] z-30 relative">
         <div className="xl:px-8 px-5 pt-14 pb-3 flex flex-col justify-between">
           <div className="absolute xl:-top-16 -top-12 xl:right-2 right-2 mt-2 mr-2">
             <img

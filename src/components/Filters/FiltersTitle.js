@@ -1,12 +1,12 @@
 const FiltersTitle = () => {
   const gradientButtonClasses =
-    "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold xl:h-[74px] xl:w-[232px] lg:h-[54px] lg:w-[180px] md:h-[54px] md:w-[160px] h-[44.017px] w-full -skew-x-12 xl:text-[20px] text-xs hover:scale-105 transition-all delay-100";
+    "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold xl:h-[4.625em] xl:w-[14.5em] lg:h-[4em] lg:w-[10em] md:h-[3.375em] md:w-[9.5em] h-[4em] w-full -skew-x-12 xl:text-[1.25rem]  hover:scale-105 transition-all delay-100 lg:text-xl md:text-lg text-xs";
 
   const gradientBorderButtonClasses =
-    "uppercase text-center font-ondo font-extrabold xl:h-[74px] xl:w-[232px] lg:h-[54px] lg:w-[180px] md:h-[54px] md:w-[160px] h-[44.017px] w-full -skew-x-12 gradient-border text-xs hover:scale-105 transition-all delay-100";
+    "uppercase text-center font-ondo font-extrabold xl:h-[4.625em] xl:w-[14.5em] lg:h-[4em] lg:w-[10em] md:h-[3.375em] md:w-[9.5em] h-[4em] w-full -skew-x-12 xl:text-[1.25rem] hover:scale-105 transition-all delay-100 lg:text-xl md:text-lg text-xs gradient-border";
 
   return (
-    <div className="container xl:px-44 px-5 m-auto mx-auto xl:py-14">
+    <div className="container xl:px-14 lg:px-24 px-5 m-auto mx-auto xl:py-14">
       <div className="grid grid-cols-4 xl:gap-10 gap-1 ">
         <div className="col-span-4  mx-auto text-center mb-5">
           <h4
@@ -25,7 +25,7 @@ const FiltersTitle = () => {
           </h4>
         </div>
 
-        <div className="col-span-1  mx-auto text-center text-white gap-2 ">
+        <div className="col-span-1  mx-auto text-center text-white">
           <button className={gradientButtonClasses}>
             <div className={"skew-x-12"}>newest games</div>
           </button>
@@ -35,7 +35,7 @@ const FiltersTitle = () => {
           <button className={gradientBorderButtonClasses}>
             <div className={"skew-x-12 bg-transparent"}>
               <span
-                className={`text-white xl:text-[20px] lg:text-[17px] text-[11.897px]`}
+                className={`text-white xl:text-[1.125rem] lg:text-[1.063rem]`}
               >
                 Latest games
               </span>
@@ -47,7 +47,7 @@ const FiltersTitle = () => {
           <button className={gradientBorderButtonClasses}>
             <div className={"skew-x-12 bg-transparent"}>
               <span
-                className={`text-white xl:text-[20px] lg:text-[17px] text-[11.897px]`}
+                className={`text-white xl:text-[1.125rem] lg:text-[1.063rem]`}
               >
                 Fight games
               </span>
@@ -59,7 +59,7 @@ const FiltersTitle = () => {
           <button className={gradientBorderButtonClasses}>
             <div className={"skew-x-12 bg-transparent"}>
               <span
-                className={`text-white xl:text-[20px] lg:text-[17px] text-[11.897px]`}
+                className={`text-white xl:text-[1.125rem] lg:text-[1.063rem]`}
               >
                 Sport Games
               </span>

@@ -7,7 +7,7 @@ const MobileCallToAction = () => {
         <div className="grid grid-cols-4 gap-6">
           <div className="col-span-4 ">
             <div
-              className={`flex flex-col overflow-visible rounded-lg shadow-sm text-white shadow-slate-900 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px]`}
+              className={`flex flex-col overflow-visible rounded-lg shadow-sm text-white shadow-slate-900 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em]`}
             >
               <div className="flex-1 px-4 sm:mx-6 pt-14">
                 <header className="flex gap-4 mb-4">
@@ -37,11 +37,11 @@ const MobileCallToAction = () => {
               </div>
 
               <figure className="flex-1">
-                <div className={"relative h-[400px] w-full"}>
+                <div className={"relative h-[25em] w-full"}>
                   <img
                     src={"/assets/cta/cta-image.png"}
                     alt="cta"
-                    className="object-cover absolute h-[431px] w-[362px] -top-[30px] "
+                    className="object-cover absolute h-[26.938em] w-[22.625em] -top-[1.875em] "
                   />
                 </div>
               </figure>
@@ -51,7 +51,7 @@ const MobileCallToAction = () => {
       </div>
 
       <div
-        className={`inline-flex items-center gap-x-14 h-[50px] w-[1989px] -ml-[300px] mt-16 text-white  overflow-hidden`}
+        className={`inline-flex items-center gap-x-14 h-[3.125em] w-[124.313em] -ml-[18.75em] mt-16 text-white  overflow-hidden`}
       >
         <div className=" inline-flex ">
           <img
@@ -59,7 +59,7 @@ const MobileCallToAction = () => {
             alt={"star"}
             className={"h-1/4 mr-6"}
           />{" "}
-          <span className={"uppercase font-extrabold text-[18px]"}>
+          <span className={"uppercase font-extrabold text-[1.125rem]"}>
             Gaming Spanning
           </span>
         </div>
@@ -69,7 +69,7 @@ const MobileCallToAction = () => {
             alt={"star"}
             className={"h-1/4 mr-6"}
           />{" "}
-          <span className={"uppercase font-extrabold text-[18px]"}>
+          <span className={"uppercase font-extrabold text-[1.125rem]"}>
             Action - Packed
           </span>
         </div>
@@ -79,7 +79,7 @@ const MobileCallToAction = () => {
             alt={"star"}
             className={"h-1/4 mr-6"}
           />{" "}
-          <span className={"uppercase font-extrabold text-[18px]"}>
+          <span className={"uppercase font-extrabold text-[1.125rem]"}>
             {" "}
             Mind - Bending
           </span>
@@ -90,7 +90,7 @@ const MobileCallToAction = () => {
             alt={"star"}
             className={"h-1/4 mr-6"}
           />{" "}
-          <span className={"uppercase font-extrabold text-[18px]"}>
+          <span className={"uppercase font-extrabold text-[1.125rem]"}>
             Collection og games
           </span>
         </div>

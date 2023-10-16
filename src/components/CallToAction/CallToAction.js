@@ -1,22 +1,26 @@
 import GradientBorderButton from "../ui/GradientBorderButton";
+import RadialBlurEffect from "../ui/RadialBlurEffect";
 
 const CallToAction = () => {
   return (
     <section className={"py-28 bg-[#2D1E6B] hidden md:block "}>
-      <div
-        className={
-          "absolute rounded-full bg-[#DD00B8] w-[521px] h-[521px] blur-[446.1348876953125px] sm:visible invisible -right-[430px] top-[1750px]"
-        }
-      ></div>
+      <RadialBlurEffect
+        blur={"blur-[27.883em]"}
+        height={"h-[32.563em]"}
+        horizontalOffSet={"-right-[26.875em]"}
+        verticalOffSet={"top-[109.375em]"}
+        zIndex={"z-10"}
+        width={"w-[32.563em]"}
+      />
       <div className="container px-6 m-auto">
         <div
-          className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px] lg:h-auto h-screen`}
+          className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] lg:h-auto h-screen`}
         >
           <figure className="lg:flex-1">
             <div className={"block"}>
               <div
-                className="lg:aspect-square aspect-video lg:object-contain object-fill absolute xl:h-[639px] lg:h-[40em] xl:w-[725px] lg:w-[40em]
-                  h-[29em] z-50 2xl:-top-[200px] xl:-top-[125px] lg:-top-[2.3em] top-[13.9em] -left-2"
+                className="lg:aspect-square aspect-video lg:object-contain object-fill absolute xl:h-[39.938em] lg:h-[40em] xl:w-[45.313em] lg:w-[40em]
+                  h-[29em] z-50 2xl:-top-[12.5em] xl:-top-[7.813em] lg:-top-[2.3em] top-[13.9em] -left-2"
                 style={{
                   backgroundImage: `url("/assets/cta/cta-image.png")`,
                 }}
@@ -54,7 +58,7 @@ const CallToAction = () => {
       </div>
 
       <div
-        className={`inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[50px] w-[1989px] 2xl:w-[3000px] 2xl:-ml-0 -ml-[200px] mt-16 text-white text-[34.039px] `}
+        className={`inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[3.125em] w-[124.313em] 2xl:w-[187.5em] 2xl:-ml-0 -ml-[12.5em] mt-16 text-white text-[2.127rem] `}
       >
         <div className=" inline-flex ">
           <img
