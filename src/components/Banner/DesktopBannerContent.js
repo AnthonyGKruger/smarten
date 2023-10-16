@@ -2,15 +2,22 @@ import BannerActions from "./BannerActions";
 import BannerStats from "./BannerStats";
 import MobileBannerContent from "./MobileBannerContent";
 import RadialBlurEffect from "../ui/RadialBlurEffect";
+import { useRef } from "react";
+import useIsInViewPort from "../../hooks/useIsInViewPort";
 
 const DesktopBannerContent = () => {
+  const ref = useRef();
+  const isInViewPort = useIsInViewPort(ref);
+
   return (
     <div
       className={
         "lg:h-screen md:h-[30em] h-fit w-screen bg-[#3924BB] relative mix-blend-color-dodge"
       }
+      ref={ref}
     >
       <RadialBlurEffect
+        isInView={isInViewPort}
         color={"bg-[#fc4343]"}
         blur={"blur-[8.5rem]"}
         height={"h-[21.313em]"}

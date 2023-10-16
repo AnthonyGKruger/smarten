@@ -13,11 +13,10 @@
   src: url("../public/assets/fonts/OndoFont/FONTSPRINGDEMO-OndoRegular.ttf");
 }
 
-.logo-gradient{
-  fill:  url("../public/assets/logo-gradient.png");
-}
+/*.logo-gradient{*/
+/*  fill:  url("../public/assets/logo-gradient.png");*/
+/*}*/
 
-/* Custom CSS for the gradient border on certain buttons*/
 .gradient-border {
   border-image: linear-gradient(to right,  #6542F4 11.84%, #F976FF 51.56%, #B50098 86.46%);
   border-image-slice: 1;
@@ -61,6 +60,12 @@
     font-size:1rem;
   }
 }
+
+/*.glide__slide--active{*/
+/*  transition:ease-in-out;*/
+/*  transform:scale(105%);*/
+/*  transition-duration: 500ms;*/
+/*}*/
 
 /*@media  (max-width:1024px){*/
 /*  .glide__slide--active > img {*/

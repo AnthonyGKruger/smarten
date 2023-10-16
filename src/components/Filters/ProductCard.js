@@ -32,7 +32,7 @@ const ProductCard = ({ name, author, avatar, publisher, image }) => {
           <div className={"w-full"}>
             <button
               className={
-                "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold -skew-x-12 h-[2.751em] w-full hover:scale-105 transition-all delay-100"
+                "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold -skew-x-12 h-[2.751em] w-full hover:scale-105 transition-all duration-300"
               }
             >
               <div className={"skew-x-12"}>Live demo</div>

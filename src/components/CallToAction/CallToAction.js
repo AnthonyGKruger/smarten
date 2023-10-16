@@ -1,10 +1,16 @@
 import GradientBorderButton from "../ui/GradientBorderButton";
 import RadialBlurEffect from "../ui/RadialBlurEffect";
+import { useRef } from "react";
+import useIsInViewPort from "../../hooks/useIsInViewPort";
 
 const CallToAction = () => {
+  const ref = useRef();
+  const isInViewPort = useIsInViewPort(ref);
+
   return (
-    <section className={"py-28 bg-[#2D1E6B] hidden md:block "}>
+    <section className={"py-28 bg-[#2D1E6B] hidden md:block "} ref={ref}>
       <RadialBlurEffect
+        isInView={isInViewPort}
         blur={"blur-[27.883em]"}
         height={"h-[32.563em]"}
         horizontalOffSet={"-right-[26.875em]"}
@@ -14,7 +20,7 @@ const CallToAction = () => {
       />
       <div className="container px-6 m-auto">
         <div
-          className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] lg:h-auto h-screen`}
+          className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] lg:h-auto h-screen z-30 relative`}
         >
           <figure className="lg:flex-1">
             <div className={"block"}>
