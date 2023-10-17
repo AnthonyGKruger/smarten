@@ -1,12 +1,15 @@
 const FiltersTitle = () => {
   const gradientButtonClasses =
-    "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold xl:h-[4.625em] xl:w-[14.5em] lg:h-[4em] lg:w-[10em] md:h-[3.375em] md:w-[9.5em] h-[4em] w-full -skew-x-12 xl:text-[1.25rem]  hover:scale-105 transition-all delay-100 lg:text-xl md:text-lg text-xs";
+    "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold xl:h-[4.625em] xl:w-[14.5em] lg:h-[4em] lg:w-[10em] md:h-[3.375em] md:w-[9.5em] h-[4em] w-full -skew-x-12 xl:text-[1.25rem]  hover:scale-105 transition-all duration-300 lg:text-xl md:text-lg text-xs";
 
   const gradientBorderButtonClasses =
-    "uppercase text-center font-ondo font-extrabold xl:h-[4.625em] xl:w-[14.5em] lg:h-[4em] lg:w-[10em] md:h-[3.375em] md:w-[9.5em] h-[4em] w-full -skew-x-12 xl:text-[1.25rem] hover:scale-105 transition-all delay-100 lg:text-xl md:text-lg text-xs gradient-border";
+    "uppercase text-center font-ondo font-extrabold xl:h-[4.625em] xl:w-[14.5em] lg:h-[4em] lg:w-[10em] md:h-[3.375em] md:w-[9.5em] h-[4em] w-full -skew-x-12 xl:text-[1.25rem] hover:scale-105 transition-all duration-300 lg:text-xl md:text-lg text-xs gradient-border";
 
   return (
-    <div className="container xl:px-14 lg:px-24 px-5 m-auto mx-auto xl:py-14">
+    <div
+      id="games"
+      className="container xl:px-14 lg:px-24 px-5 m-auto mx-auto xl:py-14"
+    >
       <div className="grid grid-cols-4 xl:gap-10 gap-1 ">
         <div className="col-span-4  mx-auto text-center mb-5">
           <h4

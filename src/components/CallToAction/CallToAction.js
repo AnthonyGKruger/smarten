@@ -2,6 +2,7 @@ import GradientBorderButton from "../ui/GradientBorderButton";
 import RadialBlurEffect from "../ui/RadialBlurEffect";
 import { useRef } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
+import StarBannerNoBackground from "../ui/StarBannerNoBackground";
 
 const CallToAction = () => {
   const ref = useRef();
@@ -63,44 +64,7 @@ const CallToAction = () => {
         </div>
       </div>
 
-      <div
-        className={`inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[3.125em] w-[124.313em] 2xl:w-[187.5em] 2xl:-ml-0 -ml-[12.5em] mt-16 text-white text-[2.127rem] `}
-      >
-        <div className=" inline-flex ">
-          <img
-            src={"/assets/Star 1.svg"}
-            alt={"star"}
-            className={"h-1/2 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold "}>Gaming Spanning</span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={"/assets/Star 1.svg"}
-            alt={"star"}
-            className={"h-1/2 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold "}>Action - Packed</span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={"/assets/Star 1.svg"}
-            alt={"star"}
-            className={"h-1/2 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold "}> Mind - Bending</span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={"/assets/Star 1.svg"}
-            alt={"star"}
-            className={"h-1/2 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold "}>
-            Collection og games
-          </span>
-        </div>
-      </div>
+      <StarBannerNoBackground />
     </section>
   );
 };
