@@ -11,7 +11,9 @@ const GameCarousel = () => {
 
   return (
     <section
-      className={"bg-[#2D1E6B] xl:pt-28 md:py-24  pt-14 overflow-hidden "}
+      className={
+        "bg-[#2D1E6B] xl:pt-48 md:pt-44 lg:pt-36 pt-28 overflow-hidden "
+      }
       ref={ref}
     >
       <RadialBlurEffect

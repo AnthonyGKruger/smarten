@@ -2,12 +2,53 @@ import BannerActions from "./BannerActions";
 import BannerStats from "./BannerStats";
 import MobileBannerContent from "./MobileBannerContent";
 import RadialBlurEffect from "../ui/RadialBlurEffect";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
+import Glide from "@glidejs/glide";
 
 const DesktopBannerContent = () => {
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
+
+  const randomId = Math.floor(Math.random() * 100) + 1;
+
+  useEffect(() => {
+    const slider = new Glide(`.star-banner-${randomId}`, {
+      type: "carousel",
+      autoplay: 1,
+      animationDuration: 5000,
+      animationTimingFunc: "linear",
+      perView: 3,
+      classes: {
+        nav: {
+          active: "[&>*]:bg-wuiSlate-700",
+        },
+      },
+      breakpoints: {
+        1024: {
+          perView: 2,
+        },
+        640: {
+          perView: 2,
+          // gap: 10,
+        },
+        325: {
+          perView: 1,
+        },
+      },
+    }).mount();
+
+    return () => {
+      slider.destroy();
+    };
+  }, [randomId]);
+
+  const spanClasses =
+    "uppercase inline-flex font-extrabold lg:mt-2 md:mt-1 mt-3 banner-item lg:text-3xl md:text-2xl text-sm";
+  const liClasses = "inline-flex uppercase font-extrabold ";
+  // const liClasses = "inline-flex uppercase font-extrabold banner-item";
+  const imgClasses =
+    "md:h-1/2 h-1/4 mr-6 md:mt-0 md:mt-3 lg:mt-1 justify-center items-center";
 
   return (
     <div
@@ -26,69 +67,52 @@ const DesktopBannerContent = () => {
         zIndex={""}
         width={"w-[25.313em]"}
       />
+
       <div
-        className={`2xl:w-[150em] xl:w-[110em] xl:-ml-[12em] lg:w-[80em] w-[60em] lg:-ml-[8em] md:w-[60em] md:-ml-[6em] -ml-[12em] xl:h-[5.625em] lg:h-[4.375em] h-[4.375em] absolute 2xl:mt-[56.5em] xl:mt-[44.4em] lg:mt-[39.75em] md:mt-[28em] mt-[39.5em] -skew-y-2 text-white border-2 border-slate-700 bg-gradient-to-t  from-[#000000] to-slate-700 backdrop-blur-[25px] isolate z-50`}
+        className={`star-banner-${randomId} relative w-full text-white -skew-y-2 z-50`}
       >
-        <div className="px-[0.375rem] m-auto h-full">
-          <div className="grid grid-cols-12  md:grid-cols-12 lg:grid-cols-12 place-items-center h-full">
-            <div className="col-span-3 lg:col-span-3 flex items-center">
+        <div data-glide-el="track">
+          <ul
+            className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d]
+          [touch-action: pan-Y] [will-change: transform] overflow-hidden p-0 inline-flex items-center gap-x-2
+         2xl:w-[150em] xl:w-[200vw]  lg:w-[80em] w-[60em] lg:-ml-[8em] md:w-[60em] md:-ml-[6em] -ml-[12em]
+          xl:h-[5.625em] lg:h-[4.375em] h-[4.375em] absolute 2xl:mt-[56.5em] xl:mt-[95vh] lg:mt-[39.75em] md:mt-[28em]
+           mt-[39.5em] -skew-y-2 text-white border-2 border-slate-700  bg-gradient-to-t  from-[#000000] to-slate-700
+           backdrop-blur-[25px] isolate z-50"
+          >
+            <li className={liClasses}>
               <img
                 src={"/assets/Star 1.svg"}
                 alt={"star"}
-                className={"h-6 lg:h-8 xl:h-12 mr-2"}
+                className={imgClasses}
               />{" "}
-              <span
-                className={
-                  "uppercase font-extrabold xl:text-3xl lg:text-xl md:text-lg text-md"
-                }
-              >
-                Gaming Spanning
-              </span>
-            </div>
-            <div className="col-span-3 lg:col-span-3 flex items-center">
+              <span className={spanClasses}>Gaming Spanning</span>
+            </li>
+            <li className={liClasses}>
               <img
                 src={"/assets/Star 1.svg"}
                 alt={"star"}
-                className={"h-6 lg:h-8 xl:h-12 mr-2"}
+                className={imgClasses}
               />{" "}
-              <span
-                className={
-                  "uppercase font-extrabold xl:text-3xl lg:text-xl md:text-lg text-md"
-                }
-              >
-                Action - Packed
-              </span>
-            </div>
-            <div className="col-span-3 lg:col-span-3 flex items-center">
+              <span className={spanClasses}>Action - Packed</span>
+            </li>
+            <li className={liClasses}>
               <img
                 src={"/assets/Star 1.svg"}
                 alt={"star"}
-                className={"h-6 lg:h-8 xl:h-12 mr-2"}
+                className={imgClasses}
               />{" "}
-              <span
-                className={
-                  "uppercase font-extrabold xl:text-3xl lg:text-xl md:text-lg text-md"
-                }
-              >
-                {" "}
-                Mind - Bending
-              </span>
-            </div>
-            <div className="col-span-3 lg:col-span-3 flex items-center">
+              <span className={spanClasses}> Mind - Bending</span>
+            </li>
+            <li className={liClasses}>
               <img
                 src={"/assets/Star 1.svg"}
                 alt={"star"}
-                className={"h-6 lg:h-8 xl:h-12 mr-2"}
+                className={imgClasses}
               />{" "}
-              <span
-                className={
-                  "uppercase font-extrabold xl:text-3xl lg:text-xl md:text-lg text-md"
-                }
-              >
-                Collection of games
-              </span>
-            </div>
-          </div>
+              <span className={spanClasses}>Collection og games</span>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -139,7 +163,7 @@ const DesktopBannerContent = () => {
         src={"/assets/banner/banner-image.png"}
         alt={"banner"}
         className={
-          " lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:-mt-2 lg:-mt-2 xl:mt-0 object-cover object-right -z-50 relative hidden md:block"
+          "lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:-mt-2 lg:-mt-2  object-cover object-right -z-50 relative hidden md:block"
         }
       />
 

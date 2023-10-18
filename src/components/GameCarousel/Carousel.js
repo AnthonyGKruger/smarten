@@ -36,8 +36,8 @@ const Carousel = () => {
   return (
     <>
       <div
-        className="glide-05 relative xl:w-[130em] lg:w-[80em] md:w-[60em]  xl:-left-[20em] lg:-left-[8em]
-      md:-left-[6em]  z-30 xl:py-14 md:py-14 py-10      max-[425px]:w-[20em] max-[425px]:left-12 max-[375px]:left-6  max-[320px]:left-0"
+        className="glide-05 relative xl:w-[130em] lg:w-[80em] md:w-[60em]  xl:-left-[20em] 2xl:-left-[10em] lg:-left-[8em]
+      md:-left-[6em]  z-30 xl:py-14 md:py-14 py-10 max-[425px]:w-[20em] max-[425px]:left-12 max-[375px]:left-6  max-[320px]:left-0"
       >
         <div
           className={

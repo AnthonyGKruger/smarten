@@ -62,7 +62,7 @@ const TestimonialsCarousel = () => {
             <li>
               <TestimonialCard
                 review={
-                  "Another aspect that sets this website apart is its vibrant and passionate community. The forum section provides a platform for gamers from all walks of life to connect, share their experiences, and discuss their favorite titles. I've made valuable friendships and found like-minded individuals who share my enthusiasm for gaming."
+                  "Another aspect that sets this website apart is its vibrant and passionate community. The forum section provides a platform for gamers from all walks of life to connect and discuss their favorite titles. I've made valuable friendships and found like-minded individuals who share my enthusiasm for gaming."
                 }
                 avatar={"/assets/testimonials/Ellipse 13.svg"}
                 author={"Kathryn Murphy"}

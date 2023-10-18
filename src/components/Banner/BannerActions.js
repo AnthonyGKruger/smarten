@@ -17,7 +17,7 @@ const BannerActions = () => {
         <GradientBorderButton
           textContent={"play now"}
           redirectTo={() => {
-            window.location.hash = "#games";
+            window.location.hash = "#play-now";
           }}
         />
       </div>

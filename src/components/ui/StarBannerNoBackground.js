@@ -7,8 +7,8 @@ const StarBannerNoBackground = () => {
   useEffect(() => {
     const slider = new Glide(`.star-banner-${randomId}`, {
       type: "carousel",
-      autoplay: 1,
-      animationDuration: 5000,
+      autoplay: 2,
+      animationDuration: 3000,
       animationTimingFunc: "linear",
       perView: 3,
       classes: {
@@ -18,11 +18,14 @@ const StarBannerNoBackground = () => {
       },
       breakpoints: {
         1024: {
-          perView: 2,
+          perView: 3,
         },
         640: {
-          perView: 1,
+          perView: 2,
           // gap: 10,
+        },
+        325: {
+          perView: 1,
         },
       },
     }).mount();
@@ -32,59 +35,51 @@ const StarBannerNoBackground = () => {
     };
   }, [randomId]);
 
+  const spanClasses =
+    "uppercase inline-flex font-extrabold lg:mt-1 md:mt-2 mt-5 banner-item";
+  const liClasses = "inline-flex uppercase font-extrabold banner-item";
+  const imgClasses = "h-1/2 mr-6 md:mt-0 mt-3 justify-center items-center";
+
   return (
-    <div
-      className={`star-banner-${randomId} relative w-full text-white text-2xl`}
-    >
+    <div className={`star-banner-${randomId} relative w-full text-white `}>
       <div data-glide-el="track">
         <ul
-          className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative overflow-hidden p-0
-        inline-flex items-center gap-x-14 2xl:gap-x-28 xl:h-[3.125em] w-[124.313em] 2xl:w-[187.5em] 2xl:-ml-0 -ml-[12.5em] mt-16 text-white lg:text-3xl md:text-lg"
+          className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d]
+          [touch-action: pan-Y] [will-change: transform] relative overflow-hidden p-0 inline-flex items-center gap-x-2
+          2xl:gap-x-28 xl:h-[3.125em] md:w-[120vw] w-[350vw] 2xl:w-[187.5em] 2xl:-ml-0 md:-ml-[12.5em] ml-[50vw] mt-16 text-white lg:text-3xl
+           md:text-lg z-50 text-sm"
         >
-          <li className={"inline-flex uppercase font-extrabold banner-item"}>
+          <li className={liClasses}>
             <img
               src={"/assets/Star 1.svg"}
               alt={"star"}
-              className={"h-1/2 mr-6 md:mt-0 mt-3 justify-center items-center"}
+              className={imgClasses}
             />{" "}
-            <span className={"uppercase font-extrabold lg:mt-1 md:mt-2"}>
-              Gaming Spanning
-            </span>
+            <span className={spanClasses}>Gaming Spanning</span>
           </li>
-          <li className={"inline-flex uppercase font-extrabold banner-item"}>
+          <li className={liClasses}>
             <img
               src={"/assets/Star 1.svg"}
               alt={"star"}
-              className={"h-1/2 mr-6 md:mt-0 mt-3 justify-center items-center"}
+              className={imgClasses}
             />{" "}
-            <span className={"uppercase font-extrabold lg:mt-1 md:mt-2"}>
-              Action - Packed
-            </span>
+            <span className={spanClasses}>Action - Packed</span>
           </li>
-          <li className={"inline-flex uppercase font-extrabold banner-item"}>
+          <li className={liClasses}>
             <img
               src={"/assets/Star 1.svg"}
               alt={"star"}
-              className={"h-1/2 mr-6 md:mt-0 mt-3 justify-center items-center"}
+              className={imgClasses}
             />{" "}
-            <span className={"uppercase font-extrabold lg:mt-1 md:mt-2"}>
-              {" "}
-              Mind - Bending
-            </span>
+            <span className={spanClasses}> Mind - Bending</span>
           </li>
-          <li className={"inline-flex uppercase font-extrabold banner-item"}>
+          <li className={liClasses}>
             <img
               src={"/assets/Star 1.svg"}
               alt={"star"}
-              className={"h-1/2 mr-6 md:mt-0 mt-3 justify-center items-center"}
+              className={imgClasses}
             />{" "}
-            <span
-              className={
-                "uppercase inline-flex font-extrabold lg:mt-1 md:mt-2 banner-item"
-              }
-            >
-              Collection og games
-            </span>
+            <span className={spanClasses}>Collection og games</span>
           </li>
         </ul>
       </div>

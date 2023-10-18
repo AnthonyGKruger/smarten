@@ -13,10 +13,6 @@
   src: url("../public/assets/fonts/OndoFont/FONTSPRINGDEMO-OndoRegular.ttf");
 }
 
-/*.logo-gradient{*/
-/*  fill:  url("../public/assets/logo-gradient.png");*/
-/*}*/
-
 .gradient-border {
   border-image: linear-gradient(to right,  #6542F4 11.84%, #F976FF 51.56%, #B50098 86.46%);
   border-image-slice: 1;
@@ -64,26 +60,30 @@
 .banner-item{
   margin-left: 0 !important;
   margin-right: 0 !important;
-  width: fit-content !important;
+  width: 70vw !important;
+
 }
 
-/*@media (min-width: 768px) {*/
-/*  .banner-item{*/
-/*    width: 20em !important;*/
-/*  }*/
-/*}*/
+@media (min-width: 768px) {
+  .banner-item{
+    width: 40vw !important;
 
-/*@media (min-width: 1024px) {*/
-/*  .banner-item{*/
-/*    width: 23em !important;*/
-/*  }*/
-/*}*/
+  }
+}
 
-/*@media (min-width: 1440px) {*/
-/*  .banner-item{*/
-/*    width: 15em !important;*/
-/*  }*/
-/*}*/
+@media (min-width: 1024px) {
+  .banner-item{
+    width: 50vw !important;
+
+  }
+}
+
+@media (min-width: 1440px) {
+  .banner-item{
+    width: fit-content !important;
+
+  }
+}
 
 body {
   margin: 0;
@@ -92,10 +92,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  overflow-x:hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html{
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x:hidden;
 }
 

@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className={"bg-[#351F78]"}>
+      <main className={"bg-[#351F78] overflow-x-hidden"}>
         <Banner />
         <GameCarousel />
         <CallToAction />

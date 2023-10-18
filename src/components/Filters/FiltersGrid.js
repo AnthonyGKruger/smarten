@@ -33,7 +33,7 @@ const FiltersGrid = () => {
         blur={"blur-[27.883em]"}
         height={"h-[32.563em]"}
         horizontalOffSet={"-left-[15.625em]"}
-        verticalOffSet={"top-[250em]"}
+        verticalOffSet={"top-[500vh]"}
         zIndex={"z-10"}
         width={"w-[32.563em]"}
       />

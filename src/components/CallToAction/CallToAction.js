@@ -21,13 +21,13 @@ const CallToAction = () => {
       />
       <div className="container px-6 m-auto">
         <div
-          className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] lg:h-auto h-screen z-30 relative`}
+          className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] lg:h-auto h-screen z-30 relative lg:overflow-y-visible md:overflow-y-hidden`}
         >
           <figure className="lg:flex-1">
             <div className={"block"}>
               <div
                 className="lg:aspect-square aspect-video lg:object-contain object-fill absolute xl:h-[39.938em] lg:h-[40em] xl:w-[45.313em] lg:w-[40em]
-                  h-[29em] z-50 2xl:-top-[12.5em] xl:-top-[7.813em] lg:-top-[2.3em] top-[13.9em] -left-2"
+                  h-[74vh] z-50 2xl:-top-[12.5em] xl:-top-[7.813em] lg:-top-[2.3em] top-[13.9em] -left-2 bg-no-repeat"
                 style={{
                   backgroundImage: `url("/assets/cta/cta-image.png")`,
                 }}
