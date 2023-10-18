@@ -60,7 +60,7 @@ const Footer = () => {
           [touch-action: pan-Y] [will-change: transform] overflow-hidden p-0 inline-flex items-center gap-x-2
          2xl:w-[150em] xl:w-[200vw]  lg:w-[80em] w-[60em] lg:-ml-[8em] md:w-[60em] md:-ml-[6em] -ml-[12em]
           xl:h-[5.625em] lg:h-[4.375em] h-[4.375em]
-           text-white border-t-1 border-slate-700  bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[1.563em] isolate z-50"
+           text-white border-t-1 border-slate-700  bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[1.563em] isolate z-50 star-banner"
           >
             <li className={liClasses}>
               <img
