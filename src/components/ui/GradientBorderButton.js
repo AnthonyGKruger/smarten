@@ -1,9 +1,10 @@
-const GradientBorderButton = ({ textContent, textColor }) => {
+const GradientBorderButton = ({ textContent, textColor, redirectTo }) => {
   return (
     <button
       className={
-        "uppercase text-center font-ondo font-extrabold xl:h-[74px] xl:w-[232px] lg:h-[54px] lg:w-[180px] md:h-[54px] md:w-[160px] h-[44.017px] w-5/6 -skew-x-12 gradient-border"
+        "uppercase text-center  font-ondo font-extrabold xl:h-[3.7em] xl:w-[12em] lg:h-[3.375em] lg:w-[11.25em] md:h-[4.375em] md:w-[12em] -skew-x-12 xl:text-[1.25rem] lg:text-[1.063rem]  h-[3.751em] w-5/6 text-[0.744rem] gradient-border hover:scale-105 transition-all duration-300"
       }
+      onClick={redirectTo}
     >
       <div className={"skew-x-12 bg-transparent"}>
         <span

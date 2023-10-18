@@ -1,11 +1,17 @@
 import productData from "./filters-data.json";
 import ProductCard from "./ProductCard";
+import RadialBlurEffect from "../ui/RadialBlurEffect";
+import { useRef } from "react";
+import useIsInViewPort from "../../hooks/useIsInViewPort";
 
 const FiltersGrid = () => {
-  console.log(productData);
-  const filterCards = productData.map((product) => {
+  const ref = useRef();
+  const isInViewPort = useIsInViewPort(ref);
+
+  const filterCards = productData.map((product, idx) => {
     return (
       <ProductCard
+        key={idx}
         name={product.name}
         author={product.author}
         avatar={product.avatar}
@@ -16,17 +22,21 @@ const FiltersGrid = () => {
   });
 
   return (
-    <section className={"py-10"}>
+    <section className={"py-10"} ref={ref}>
       <div className="container px-6 m-auto">
         <div className="grid grid-cols-4 gap-6 gap-y-8 md:grid-cols-8 lg:grid-cols-12">
           {filterCards}
         </div>
       </div>
-      <div
-        className={
-          "absolute rounded-full bg-[#DD00B8] w-[521px] h-[521px] blur-[446.1348876953125px] sm:visible invisible -left-[250px] top-[4000px]"
-        }
-      ></div>
+      <RadialBlurEffect
+        isInView={isInViewPort}
+        blur={"blur-[27.883em]"}
+        height={"h-[32.563em]"}
+        horizontalOffSet={"-left-[15.625em]"}
+        verticalOffSet={"top-[500vh]"}
+        zIndex={"z-10"}
+        width={"w-[32.563em]"}
+      />
     </section>
   );
 };

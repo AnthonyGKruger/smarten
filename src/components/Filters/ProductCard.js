@@ -1,7 +1,7 @@
 const ProductCard = ({ name, author, avatar, publisher, image }) => {
   return (
     <div className="col-span-4">
-      <div className=" rounded-lg text-white shadow shadow-slate-500 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[25px]">
+      <div className="relative rounded-lg text-white shadow shadow-slate-500 sm:flex-row bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] z-50 hover:scale-105 ease-in-out duration-300">
         <figure className={"p-3"}>
           <img src={image} alt={name} className=" w-full" />
         </figure>
@@ -32,8 +32,9 @@ const ProductCard = ({ name, author, avatar, publisher, image }) => {
           <div className={"w-full"}>
             <button
               className={
-                "uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold -skew-x-12 h-[44.017px] w-full"
+                "cursor-pointer uppercase text-center bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] font-ondo font-extrabold -skew-x-12 h-[2.751em] w-full hover:scale-105 transition-all duration-300"
               }
+              onClick={() => window.open("https://ezdev.solutions", "_blank")}
             >
               <div className={"skew-x-12"}>Live demo</div>
             </button>
