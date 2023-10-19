@@ -11,7 +11,8 @@ Task is to build the an SPA based on the [following design](https://www.figma.co
 - The aim is to build this design as a 1 page site.
 - You are to make use of dev mode to ascertain values for styling.
 - Tech stack:
-  - You may use React, Angular or vanilla HTML, CSS, JS. ● Challenge: Try to avoid using Bootstrap and/or Jquery
+  - You may use React, Angular or vanilla HTML, CSS, JS. 
+  - Challenge: Try to avoid using Bootstrap and/or Jquery
 
 ### Tech stack used:
 
