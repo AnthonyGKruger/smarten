@@ -5,6 +5,7 @@ import RadialBlurEffect from "../ui/RadialBlurEffect";
 import { useEffect, useRef } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
 import Glide from "@glidejs/glide";
+import GradientText from "../ui/GradientText";
 
 const DesktopBannerContent = () => {
   const ref = useRef();
@@ -128,13 +129,13 @@ const DesktopBannerContent = () => {
             }
           >
             Let your mind{" "}
-            <span
-              className={
+            <GradientText
+              classes={
                 "bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] text-transparent bg-clip-text"
               }
-            >
-              explore
-            </span>{" "}
+              content={"explore"}
+              isVisible={isInViewPort}
+            />{" "}
             new world
           </h1>
         </div>

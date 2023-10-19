@@ -1,6 +1,16 @@
+import GradientText from "../ui/GradientText";
+import { useRef } from "react";
+import useIsInViewPort from "../../hooks/useIsInViewPort";
+
 const MobileBannerContent = () => {
+  const ref = useRef();
+  const isInViewPort = useIsInViewPort(ref);
+
   return (
-    <div className="overflow-hidden bg-[#000000] text-white pt-20 md:hidden">
+    <div
+      ref={ref}
+      className="overflow-hidden bg-[#000000] text-white pt-20 md:hidden"
+    >
       <div className="bg-[#000000]">
         {/*<div className="p-6">*/}
         <header className="absolute p-6">
@@ -11,13 +21,13 @@ const MobileBannerContent = () => {
               }
             >
               Let your mind{" "}
-              <span
-                className={
+              <GradientText
+                classes={
                   "bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] text-transparent bg-clip-text"
                 }
-              >
-                explore
-              </span>{" "}
+                content={"explore"}
+                isVisible={isInViewPort}
+              />{" "}
               new world
             </h1>
           </div>

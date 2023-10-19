@@ -68,7 +68,9 @@ const Nav = () => {
                 role="menuitem"
                 aria-haspopup="false"
                 className={navItemClasses}
-                href="http://localhost:3000"
+                href="https://ezdev.solutions"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span className={"font-extrabold"}>Products</span>
               </a>
@@ -79,7 +81,9 @@ const Nav = () => {
                 aria-current="page"
                 aria-haspopup="false"
                 className={navItemClasses}
-                href="http://localhost:3000"
+                href="https://ezdev.solutions"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>Apps & Games</span>
               </a>
@@ -89,7 +93,9 @@ const Nav = () => {
                 role="menuitem"
                 aria-haspopup="false"
                 className={navItemClasses}
-                href="http://localhost:3000"
+                href="https://ezdev.solutions"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>Features</span>
               </a>
@@ -99,7 +105,9 @@ const Nav = () => {
                 role="menuitem"
                 aria-haspopup="false"
                 className={navItemClasses}
-                href="http://localhost:3000"
+                href="https://ezdev.solutions"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>Support</span>
               </a>
@@ -109,7 +117,9 @@ const Nav = () => {
                 role="menuitem"
                 aria-haspopup="false"
                 className={navItemClasses}
-                href="http://localhost:3000"
+                href="https://ezdev.solutions"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>Wishlist</span>
               </a>
@@ -119,14 +129,18 @@ const Nav = () => {
                 role="menuitem"
                 aria-haspopup="false"
                 className={navItemClasses}
-                href="http://localhost:3000"
+                href="https://ezdev.solutions"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>About</span>
               </a>
             </li>
             <li role="none" className="flex items-stretch">
               <a
-                href="http://localhost:3000"
+                href="https://ezdev.solutions"
+                target="_blank"
+                rel="noreferrer"
                 className={`${navItemClasses} lg:invisible visible`}
               >
                 <img

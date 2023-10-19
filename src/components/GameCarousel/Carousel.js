@@ -36,7 +36,7 @@ const Carousel = () => {
   return (
     <>
       <div
-        className="glide-05 relative xl:w-[130em] lg:w-[80em] md:w-[60em]  xl:-left-[20em] 2xl:-left-[10em] lg:-left-[8em]
+        className="glide-05 relative xl:w-[130em] lg:w-[80em] md:w-[60em]  xl:-left-[20em] 2xl:-left-[8em] lg:-left-[8em]
       md:-left-[6em]  z-30 xl:py-14 md:py-14 py-10 max-[425px]:w-[20em] max-[425px]:left-12 max-[375px]:left-6  max-[320px]:left-0"
       >
         <div
@@ -83,40 +83,6 @@ const Carousel = () => {
             </li>
           </ul>
         </div>
-        {/*    <!-- Indicators --> */}
-        {/*<div*/}
-        {/*  className="flex w-full items-center justify-center gap-2"*/}
-        {/*  data-glide-el="controls[nav]"*/}
-        {/*>*/}
-        {/*  <button*/}
-        {/*    className="group p-4"*/}
-        {/*    data-glide-dir="=0"*/}
-        {/*    aria-label="goto slide 1"*/}
-        {/*  >*/}
-        {/*    <span className="block h-2 w-2 rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none"></span>*/}
-        {/*  </button>*/}
-        {/*  <button*/}
-        {/*    className="group p-4"*/}
-        {/*    data-glide-dir="=1"*/}
-        {/*    aria-label="goto slide 2"*/}
-        {/*  >*/}
-        {/*    <span className="block h-2 w-2 rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none"></span>*/}
-        {/*  </button>*/}
-        {/*  <button*/}
-        {/*    className="group p-4"*/}
-        {/*    data-glide-dir="=2"*/}
-        {/*    aria-label="goto slide 3"*/}
-        {/*  >*/}
-        {/*    <span className="block h-2 w-2 rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none"></span>*/}
-        {/*  </button>*/}
-        {/*  <button*/}
-        {/*    className="group p-4"*/}
-        {/*    data-glide-dir="=3"*/}
-        {/*    aria-label="goto slide 4"*/}
-        {/*  >*/}
-        {/*    <span className="block h-2 w-2 rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none"></span>*/}
-        {/*  </button>*/}
-        {/*</div>*/}
       </div>
     </>
   );

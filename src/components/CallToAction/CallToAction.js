@@ -3,6 +3,7 @@ import RadialBlurEffect from "../ui/RadialBlurEffect";
 import { useRef } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
 import StarBannerNoBackground from "../ui/StarBannerNoBackground";
+import GradientText from "../ui/GradientText";
 
 const CallToAction = () => {
   const ref = useRef();
@@ -19,7 +20,7 @@ const CallToAction = () => {
         zIndex={"z-10"}
         width={"w-[32.563em]"}
       />
-      <div className="container px-6 m-auto">
+      <div className="container px-6 m-auto 2xl:pt-28 xl:pt-28">
         <div
           className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] lg:h-auto h-screen z-30 relative lg:overflow-y-visible md:overflow-y-hidden`}
         >
@@ -40,13 +41,13 @@ const CallToAction = () => {
               <div>
                 <h3 className="text-5xl font-ondo font-extrabold uppercase">
                   Discover the{" "}
-                  <span
-                    className={
+                  <GradientText
+                    classes={
                       "bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] text-transparent bg-clip-text"
                     }
-                  >
-                    virtual
-                  </span>{" "}
+                    content={"virtual"}
+                    isVisible={isInViewPort}
+                  />{" "}
                   reality gaming
                 </h3>
               </div>
@@ -58,7 +59,12 @@ const CallToAction = () => {
               of gaming.
             </p>
             <div className={"py-14"}>
-              <GradientBorderButton textContent={"play now"} />
+              <GradientBorderButton
+                textContent={"play now"}
+                redirectTo={() => {
+                  window.location.hash = "#play-now";
+                }}
+              />
             </div>
           </div>
         </div>

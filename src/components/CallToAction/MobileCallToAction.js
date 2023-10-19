@@ -1,8 +1,14 @@
 import GradientBorderButton from "../ui/GradientBorderButton";
+import GradientText from "../ui/GradientText";
+import { useRef } from "react";
+import useIsInViewPort from "../../hooks/useIsInViewPort";
 
 const MobileCallToAction = () => {
+  const ref = useRef();
+  const isInViewPort = useIsInViewPort(ref);
+
   return (
-    <section className={"py-14 bg-[#2D1E6B] block sm:hidden"}>
+    <section className={"py-14 bg-[#2D1E6B] block sm:hidden"} ref={ref}>
       <div className="container px-6 m-auto">
         <div className="grid grid-cols-4 gap-6">
           <div className="col-span-4 ">
@@ -14,13 +20,13 @@ const MobileCallToAction = () => {
                   <div>
                     <h3 className="text-3xl font-ondo font-extrabold uppercase">
                       Discover the{" "}
-                      <span
-                        className={
+                      <GradientText
+                        classes={
                           "bg-gradient-to-r from-[#6542F4] via-[#F976FF] to-[#B50098] text-transparent bg-clip-text"
                         }
-                      >
-                        virtual
-                      </span>{" "}
+                        content={"virtual"}
+                        isVisible={isInViewPort}
+                      />{" "}
                       reality gaming
                     </h3>
                   </div>
@@ -32,7 +38,12 @@ const MobileCallToAction = () => {
                   immersive nature of gaming.
                 </p>
                 <div className={"py-14 pr-32"}>
-                  <GradientBorderButton textContent={"play now"} />
+                  <GradientBorderButton
+                    textContent={"play now"}
+                    redirectTo={() => {
+                      window.location.hash = "#play-now";
+                    }}
+                  />
                 </div>
               </div>
 
