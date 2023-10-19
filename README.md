@@ -1,7 +1,7 @@
 
 <div style="padding-top:3em">
   <img  style="display: inline" src="https://smarten-up.vercel.app/assets/icon.png" alt="board icon" width="auto" height="auto" />
-  <h1 style="display: inline" >board</h1>
+  <h1 style="display: inline" >board - SmartenUp recruitment challenge</h1>
 </div>
 
 ### Requirement:

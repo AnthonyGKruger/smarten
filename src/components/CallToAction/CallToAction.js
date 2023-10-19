@@ -22,7 +22,7 @@ const CallToAction = () => {
       />
       <div className="container px-6 m-auto 2xl:pt-28 xl:pt-28">
         <div
-          className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] lg:h-auto h-screen z-30 relative lg:overflow-y-visible md:overflow-y-hidden`}
+          className={`lg:flex rounded-lg shadow-sm text-white shadow-slate-900 bg-gradient-to-t from-[#352770] to-[#403077] backdrop-blur-[1.563em] lg:h-auto h-[50em] z-30 relative lg:overflow-y-visible md:overflow-y-hidden`}
         >
           <figure className="lg:flex-1">
             <div className={"block"}>
