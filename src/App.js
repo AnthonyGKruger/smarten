@@ -7,6 +7,7 @@ import MobileCallToAction from "./components/CallToAction/MobileCallToAction";
 import Filters from "./components/Filters/Filters";
 import TestimonialsCarousel from "./components/TestimonialsCarousel/TestimonialsCarousel";
 import Footer from "./components/ui/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <TestimonialsCarousel />
       </main>
       <Footer />
+      <Analytics />
     </>
   );
 }
