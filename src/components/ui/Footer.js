@@ -42,7 +42,7 @@ const Footer = () => {
     "md:h-1/2 h-1/4 mr-6 md:mt-0 md:mt-2 lg:mt-1 justify-center items-center";
 
   return (
-    <footer className="w-full text-white  relative 2xl:h-[44em] lg:h-[33.063em] md:h-[50em] h-[60em] font-lato ">
+    <footer className="w-full text-white  relative 2xl:h-[44em] lg:h-[32em] md:h-[50em] h-[60em] font-lato ">
       <img
         src={"/assets/footer/footer-image.png"}
         alt={"footer"}
