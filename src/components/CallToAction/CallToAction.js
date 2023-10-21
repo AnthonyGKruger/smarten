@@ -5,7 +5,7 @@ import useIsInViewPort from "../../hooks/useIsInViewPort";
 import StarBannerNoBackground from "../ui/StarBannerNoBackground";
 import GradientText from "../ui/GradientText";
 
-const CallToAction = () => {
+const CallToAction = ({ data }) => {
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
 
@@ -30,7 +30,7 @@ const CallToAction = () => {
                 className="lg:aspect-square aspect-video lg:object-contain object-fill absolute xl:h-[39.938em] lg:h-[40em] xl:w-[45.313em] lg:w-[40em]
                   h-[74vh] z-50 2xl:-top-[12.5em] xl:-top-[7.813em] lg:-top-[2.3em] top-[13.9em] -left-2 bg-no-repeat"
                 style={{
-                  backgroundImage: `url("/assets/cta/cta-image.png")`,
+                  backgroundImage: `url(${data.imageUrl})`,
                 }}
               ></div>
             </div>
@@ -52,12 +52,7 @@ const CallToAction = () => {
                 </h3>
               </div>
             </header>
-            <p className={"font-lato text-lg"}>
-              A well-designed gaming header often incorporates elements such as
-              game characters, iconic symbols, vibrant colors, and dynamic
-              visuals to convey excitement, adventure, and the immersive nature
-              of gaming.
-            </p>
+            <p className={"font-lato text-lg"}>{data.paragraphText}</p>
             <div className={"py-14"}>
               <GradientBorderButton
                 textContent={"play now"}

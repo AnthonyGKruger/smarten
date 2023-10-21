@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Glide from "@glidejs/glide";
 
-const Carousel = () => {
+const Carousel = ({ images }) => {
   useEffect(() => {
     const slider = new Glide(".glide-05", {
       type: "carousel",
@@ -57,30 +57,17 @@ const Carousel = () => {
             className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d]
            [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0 md:gap-10"
           >
-            <li>
-              <img
-                src="/assets/carousel/game-carousel-image-1.png"
-                className={imageClasses}
-                // className="m-auto max-h-full w-full max-w-full aspect-video object-cover"
-                alt={"favourite games"}
-              />
-            </li>
-            <li>
-              <img
-                src="/assets/carousel/game-carousel-image-2.png"
-                className={`${imageClasses} xl:-ml-3 lg:-ml-2.5 md:-ml-2.5`}
-                // className="m-auto max-h-full w-full max-w-full aspect-video object-cover"
-                alt={"favourite games"}
-              />
-            </li>
-            <li>
-              <img
-                src="/assets/carousel/game-carousel-image-3.png"
-                className={`${imageClasses} md:-ml-5`}
-                // className="m-auto max-h-full w-full max-w-full aspect-video object-cover"
-                alt={"favourite games"}
-              />
-            </li>
+            {images.map((image, idx) => {
+              return (
+                <li key={idx}>
+                  <img
+                    src={image}
+                    className={imageClasses}
+                    alt={"favourite games"}
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

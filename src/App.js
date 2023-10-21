@@ -8,16 +8,26 @@ import Filters from "./components/Filters/Filters";
 import TestimonialsCarousel from "./components/TestimonialsCarousel/TestimonialsCarousel";
 import Footer from "./components/ui/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
+  const [state, setState] = useState(null);
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}cta`).then((res) => {
+      setState(res.data);
+    });
+  }, []);
+
   return (
     <>
       <Header />
       <main className={"bg-[#351F78] overflow-x-hidden"}>
         <Banner />
         <GameCarousel />
-        <CallToAction />
-        <MobileCallToAction />
+        {state !== null && <CallToAction data={state} />}
+        {state !== null && <MobileCallToAction data={state} />}
         <Filters />
         <TestimonialsCarousel />
       </main>

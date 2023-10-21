@@ -2,7 +2,7 @@ import GradientText from "../ui/GradientText";
 import { useRef } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
 
-const CarouselTitle = () => {
+const CarouselTitle = ({ paragraphText }) => {
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
 

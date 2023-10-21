@@ -1,9 +1,10 @@
 import GradientBorderButton from "../ui/GradientBorderButton";
 import GradientText from "../ui/GradientText";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
+import axios from "axios";
 
-const MobileCallToAction = () => {
+const MobileCallToAction = ({ data }) => {
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
 
@@ -31,12 +32,7 @@ const MobileCallToAction = () => {
                     </h3>
                   </div>
                 </header>
-                <p className={"font-lato text-lg"}>
-                  A well-designed gaming header often incorporates elements such
-                  as game characters, iconic symbols, vibrant colors, and
-                  dynamic visuals to convey excitement, adventure, and the
-                  immersive nature of gaming.
-                </p>
+                <p className={"font-lato text-lg"}>{data.paragraphText}</p>
                 <div className={"py-14 pr-32"}>
                   <GradientBorderButton
                     textContent={"play now"}
@@ -50,7 +46,7 @@ const MobileCallToAction = () => {
               <figure className="flex-1">
                 <div className={"relative h-[25em] w-full"}>
                   <img
-                    src={"/assets/cta/cta-image.png"}
+                    src={data.imageUrl}
                     alt="cta"
                     className="object-cover absolute h-[26.938em] w-[22.625em] -top-[1.875em] "
                   />
@@ -66,7 +62,9 @@ const MobileCallToAction = () => {
       >
         <div className=" inline-flex ">
           <img
-            src={"/assets/Star 1.svg"}
+            src={
+              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
+            }
             alt={"star"}
             className={"h-1/4 mr-6"}
           />{" "}
@@ -76,7 +74,9 @@ const MobileCallToAction = () => {
         </div>
         <div className=" inline-flex ">
           <img
-            src={"/assets/Star 1.svg"}
+            src={
+              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
+            }
             alt={"star"}
             className={"h-1/4 mr-6"}
           />{" "}
@@ -86,7 +86,9 @@ const MobileCallToAction = () => {
         </div>
         <div className=" inline-flex ">
           <img
-            src={"/assets/Star 1.svg"}
+            src={
+              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
+            }
             alt={"star"}
             className={"h-1/4 mr-6"}
           />{" "}
@@ -97,7 +99,9 @@ const MobileCallToAction = () => {
         </div>
         <div className=" inline-flex ">
           <img
-            src={"/assets/Star 1.svg"}
+            src={
+              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
+            }
             alt={"star"}
             className={"h-1/4 mr-6"}
           />{" "}
