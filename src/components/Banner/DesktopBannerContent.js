@@ -2,47 +2,59 @@ import BannerActions from "./BannerActions";
 import BannerStats from "./BannerStats";
 import MobileBannerContent from "./MobileBannerContent";
 import RadialBlurEffect from "../ui/RadialBlurEffect";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
 import Glide from "@glidejs/glide";
 import GradientText from "../ui/GradientText";
+import axios from "axios";
+import StarBannerItem from "../ui/StarBannerItem";
 
 const DesktopBannerContent = () => {
+  const [state, setState] = useState(null);
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
-
   const randomId = Math.floor(Math.random() * 100) + 1;
 
-  useEffect(() => {
-    const slider = new Glide(`.star-banner-${randomId}`, {
-      type: "carousel",
-      autoplay: 1,
-      animationDuration: 5000,
-      animationTimingFunc: "linear",
-      perView: 3,
-      classes: {
-        nav: {
-          active: "[&>*]:bg-wuiSlate-700",
-        },
-      },
-      breakpoints: {
-        1024: {
-          perView: 2,
-        },
-        640: {
-          perView: 2,
-          // gap: 10,
-        },
-        325: {
-          perView: 1,
-        },
-      },
-    }).mount();
+  const flag = state !== null;
 
-    return () => {
-      slider.destroy();
-    };
-  }, [randomId]);
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}banner`).then((res) => {
+      setState(res.data);
+    });
+
+    if (state !== null) {
+      const slider = new Glide(`.star-banner-${randomId}`, {
+        type: "carousel",
+        autoplay: 2,
+        animationDuration: 3000,
+        animationTimingFunc: "linear",
+        perView: 3,
+        classes: {
+          nav: {
+            active: "[&>*]:bg-wuiSlate-700",
+          },
+        },
+        breakpoints: {
+          1024: {
+            perView: 3,
+          },
+          640: {
+            perView: 2,
+            // gap: 10,
+          },
+          325: {
+            perView: 1,
+          },
+        },
+      }).mount();
+
+      return () => {
+        slider.destroy();
+      };
+    }
+  }, [flag]);
+
+  useEffect(() => {}, []);
 
   const spanClasses =
     "uppercase inline-flex font-extrabold lg:mt-2 md:mt-1 mt-3 banner-item lg:text-3xl md:text-2xl text-sm";
@@ -81,38 +93,18 @@ const DesktopBannerContent = () => {
            mt-[39.5em] -skew-y-2 text-white border-2 border-slate-700  bg-gradient-to-t  from-[#000000] to-slate-700
            backdrop-blur-[25px] isolate z-50"
           >
-            <li className={liClasses}>
-              <img
-                src={"/assets/Star 1.svg"}
-                alt={"star"}
-                className={imgClasses}
-              />{" "}
-              <span className={spanClasses}>Gaming Spanning</span>
-            </li>
-            <li className={liClasses}>
-              <img
-                src={"/assets/Star 1.svg"}
-                alt={"star"}
-                className={imgClasses}
-              />{" "}
-              <span className={spanClasses}>Action - Packed</span>
-            </li>
-            <li className={liClasses}>
-              <img
-                src={"/assets/Star 1.svg"}
-                alt={"star"}
-                className={imgClasses}
-              />{" "}
-              <span className={spanClasses}> Mind - Bending</span>
-            </li>
-            <li className={liClasses}>
-              <img
-                src={"/assets/Star 1.svg"}
-                alt={"star"}
-                className={imgClasses}
-              />{" "}
-              <span className={spanClasses}>Collection og games</span>
-            </li>
+            {state !== null &&
+              state.tiltedBannerText.map((text, idx) => {
+                return (
+                  <StarBannerItem
+                    key={idx}
+                    text={text}
+                    imgClasses={imgClasses}
+                    liClasses={liClasses}
+                    spanClasses={spanClasses}
+                  />
+                );
+              })}
           </ul>
         </div>
       </div>
@@ -150,9 +142,7 @@ const DesktopBannerContent = () => {
               "xl:leading-[1.915rem] lg:leading-[1.29rem] 2xl:text-[1.5rem] xl:text-[1.108rem] lg:text-[0.938rem] md:text-[0.9rem] text-[1rem]"
             }
           >
-            Playing electronic games, whether through consoles, computers,
-            mobile phones or another medium altogether. Gaming is a nuanced term
-            that suggests regular gameplay, possibly as a hobby.
+            {state && state.paragraphText}
           </p>
         </div>
 
@@ -160,15 +150,19 @@ const DesktopBannerContent = () => {
         <BannerStats />
       </div>
 
-      <img
-        src={"/assets/banner/banner-image.png"}
-        alt={"banner"}
-        className={
-          "lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:-mt-2 lg:-mt-2  object-cover object-right -z-50 relative hidden md:block"
-        }
-      />
+      {state && (
+        <img
+          src={state.imageUrl}
+          alt={"banner"}
+          className={
+            "lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:-mt-2 lg:-mt-2  object-cover object-right -z-50 relative hidden md:block"
+          }
+        />
+      )}
 
-      <MobileBannerContent />
+      {state && (
+        <MobileBannerContent text={state.paragraphText} img={state.imageUrl} />
+      )}
     </div>
   );
 };

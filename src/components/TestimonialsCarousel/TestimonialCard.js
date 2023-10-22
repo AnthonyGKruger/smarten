@@ -4,7 +4,7 @@ const TestimonialCard = ({ review, avatar, author, company }) => {
       <div className="xl:px-8 px-5 pt-14 pb-3 flex  flex-col justify-between">
         <div className="absolute xl:-top-16 -top-12 xl:right-2 right-2 mt-2 mr-2">
           <img
-            src="/assets/testimonials/testimonial-badge-1.svg"
+            src="https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/testimonials/testimonial-badge-1.svg"
             alt="Badge 1"
             className="h-14 w-14 xl:h-20 xl:w-20 mr-2 "
           />
@@ -12,7 +12,7 @@ const TestimonialCard = ({ review, avatar, author, company }) => {
 
         <div className="absolute xl:-top-16 -top-12 xl:right-2 right-2 mt-2 mr-2">
           <img
-            src="/assets/testimonials/testimonial-badge-2.svg"
+            src="https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/testimonials/testimonial-badge-2.svg"
             alt="Badge 2"
             className="h-14 w-14 xl:h-20 xl:w-20 xl:mr-16 mr-12"
           />
@@ -20,7 +20,7 @@ const TestimonialCard = ({ review, avatar, author, company }) => {
 
         <div>
           <img
-            src="/assets/testimonials/Group 37.svg"
+            src="https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/testimonials/Group+37.svg"
             alt="stars"
             className={"mx-auto xl:mx-0 mb-3 xl:mb-0"}
           />
@@ -35,7 +35,9 @@ const TestimonialCard = ({ review, avatar, author, company }) => {
           </p>
 
           <img
-            src={"/assets/testimonials/testimonial-stripe.svg"}
+            src={
+              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/testimonials/testimonial-stripe.svg"
+            }
             alt={"stripe"}
           />
 
@@ -63,7 +65,7 @@ const TestimonialCard = ({ review, avatar, author, company }) => {
               }
             >
               <img
-                src="/assets/testimonials/Vector-37.svg"
+                src="https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/testimonials/Vector-37.svg"
                 alt="verified"
                 className="h-5 mt-1"
               />
@@ -73,7 +75,6 @@ const TestimonialCard = ({ review, avatar, author, company }) => {
         </header>
       </div>
     </div>
-    // </div>
   );
 };
 

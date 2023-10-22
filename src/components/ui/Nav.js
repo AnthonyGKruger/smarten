@@ -21,7 +21,12 @@ const Nav = () => {
             className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
             href="http://localhost:3000"
           >
-            <img src={"/assets/icon.png"} alt={"nav icon"} />
+            <img
+              src={
+                "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/icon.png"
+              }
+              alt={"nav icon"}
+            />
 
             <span className={"font-ondo font-extrabold text-2xl"}>board</span>
           </a>
@@ -144,13 +149,15 @@ const Nav = () => {
                 className={`${navItemClasses} lg:invisible visible`}
               >
                 <img
-                  src={"/assets/nav/cart-icon.svg"}
+                  src={
+                    "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/nav/cart-icon.svg"
+                  }
                   alt={"cart icon"}
                   className={"h-4 lg:invisible visible"}
                 />
                 <div className="absolute bottom-5 left-11 mt-2 mr-2">
                   <img
-                    src="/assets/nav/Ellipse%201.svg"
+                    src="https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/nav/Ellipse+1.svg"
                     alt="cart icon bagde"
                     className="h-1.5 w-1.5 xl:h-1.5 xl:w-1.5 mr-2 lg:invisible visible"
                   />
@@ -165,13 +172,15 @@ const Nav = () => {
               className="relative inline-flex h-10 w-10 items-center justify-center text-lg invisible lg:visible"
             >
               <img
-                src={"/assets/nav/cart-icon.svg"}
+                src={
+                  "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/nav/cart-icon.svg"
+                }
                 alt={"cart icon"}
                 className={"h-4 invisible lg:visible"}
               />
               <div className="absolute xl:top-4 xl:-right-1 lg:-right-1.5  mr-2">
                 <img
-                  src="/assets/nav/Ellipse%201.svg"
+                  src="https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/nav/Ellipse+1.svg"
                   alt="Badge 1"
                   className="xl:h-1.5 xl:w-1.5 mr-2 invisible lg:visible"
                 />

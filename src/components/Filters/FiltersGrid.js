@@ -1,25 +1,33 @@
 import productData from "./filters-data.json";
 import ProductCard from "./ProductCard";
 import RadialBlurEffect from "../ui/RadialBlurEffect";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
+import axios from "axios";
 
 const FiltersGrid = () => {
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
+  const [filterCards, setFilterCards] = useState(null);
 
-  const filterCards = productData.map((product, idx) => {
-    return (
-      <ProductCard
-        key={idx}
-        name={product.name}
-        author={product.author}
-        avatar={product.avatar}
-        image={product.image}
-        publisher={product.publisher}
-      />
-    );
-  });
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}filters`).then((res) => {
+      setFilterCards(
+        res.data.games.map((product, idx) => {
+          return (
+            <ProductCard
+              key={idx}
+              name={product.name}
+              author={product.author}
+              avatar={product.avatar}
+              image={product.image}
+              publisher={product.publisher}
+            />
+          );
+        }),
+      );
+    });
+  }, []);
 
   return (
     <section className={"py-10"} ref={ref}>

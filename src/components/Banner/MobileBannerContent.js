@@ -2,7 +2,7 @@ import GradientText from "../ui/GradientText";
 import { useRef } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
 
-const MobileBannerContent = () => {
+const MobileBannerContent = ({ text, img }) => {
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
 
@@ -32,16 +32,12 @@ const MobileBannerContent = () => {
             </h1>
           </div>
           <div className={"pt-2 w-full"}>
-            <p className={"banner-text"}>
-              Playing electronic games, whether through consoles, computers,
-              mobile phones or another medium altogether. Gaming is a nuanced
-              term that suggests regular gameplay, possibly as a hobby.
-            </p>
+            <p className={"banner-text"}>{text}</p>
           </div>
         </header>
         <figure className={"pt-44"}>
           <img
-            src={"/assets/banner/banner-image.png"}
+            src={img}
             alt={"banner"}
             className={"h-[28em] object-cover object-right-top -mr-20"}
           />

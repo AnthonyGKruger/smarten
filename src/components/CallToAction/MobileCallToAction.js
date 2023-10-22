@@ -2,8 +2,9 @@ import GradientBorderButton from "../ui/GradientBorderButton";
 import GradientText from "../ui/GradientText";
 import { useRef } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
+import StarBannerNoBackground from "../ui/StarBannerNoBackground";
 
-const MobileCallToAction = () => {
+const MobileCallToAction = ({ data }) => {
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
 
@@ -31,12 +32,7 @@ const MobileCallToAction = () => {
                     </h3>
                   </div>
                 </header>
-                <p className={"font-lato text-lg"}>
-                  A well-designed gaming header often incorporates elements such
-                  as game characters, iconic symbols, vibrant colors, and
-                  dynamic visuals to convey excitement, adventure, and the
-                  immersive nature of gaming.
-                </p>
+                <p className={"font-lato text-lg"}>{data.paragraphText}</p>
                 <div className={"py-14 pr-32"}>
                   <GradientBorderButton
                     textContent={"play now"}
@@ -50,7 +46,7 @@ const MobileCallToAction = () => {
               <figure className="flex-1">
                 <div className={"relative h-[25em] w-full"}>
                   <img
-                    src={"/assets/cta/cta-image.png"}
+                    src={data.imageUrl}
                     alt="cta"
                     className="object-cover absolute h-[26.938em] w-[22.625em] -top-[1.875em] "
                   />
@@ -61,51 +57,7 @@ const MobileCallToAction = () => {
         </div>
       </div>
 
-      <div
-        className={`inline-flex items-center gap-x-14 h-[3.125em] w-[124.313em] -ml-[18.75em] mt-16 text-white  overflow-hidden`}
-      >
-        <div className=" inline-flex ">
-          <img
-            src={"/assets/Star 1.svg"}
-            alt={"star"}
-            className={"h-1/4 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold text-[1.125rem]"}>
-            Gaming Spanning
-          </span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={"/assets/Star 1.svg"}
-            alt={"star"}
-            className={"h-1/4 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold text-[1.125rem]"}>
-            Action - Packed
-          </span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={"/assets/Star 1.svg"}
-            alt={"star"}
-            className={"h-1/4 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold text-[1.125rem]"}>
-            {" "}
-            Mind - Bending
-          </span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={"/assets/Star 1.svg"}
-            alt={"star"}
-            className={"h-1/4 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold text-[1.125rem]"}>
-            Collection og games
-          </span>
-        </div>
-      </div>
+      <StarBannerNoBackground />
     </section>
   );
 };

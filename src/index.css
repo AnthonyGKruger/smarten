@@ -5,13 +5,15 @@
 /*Installing fonts as per spec*/
 @font-face {
   font-family: "Lato";
-  src: url("../public/assets/fonts/Lato/Lato-Regular.ttf");
+  src: url("https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/fonts/Lato/Lato-Regular.ttf");
 }
 
 @font-face {
   font-family: "Ondo";
-  src: url("../public/assets/fonts/OndoFont/FONTSPRINGDEMO-OndoRegular.ttf");
+  src: url("https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/fonts/OndoFont/FONTSPRINGDEMO-OndoRegular.ttf");
 }
+
+/**/
 
 .gradient-border {
   border-image: linear-gradient(to right,  #6542F4 11.84%, #F976FF 51.56%, #B50098 86.46%);

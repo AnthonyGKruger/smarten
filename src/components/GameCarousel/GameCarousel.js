@@ -2,12 +2,22 @@ import CarouselTitle from "./CarouselTitle";
 import Carousel from "./Carousel";
 import CarouselActions from "./CarouselActions";
 import RadialBlurEffect from "../ui/RadialBlurEffect";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
+import axios from "axios";
 
 const GameCarousel = () => {
   const ref = useRef();
   const isInViewPort = useIsInViewPort(ref);
+  const [state, setState] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}game-carousel`)
+      .then((res) => {
+        setState(res.data);
+      });
+  }, []);
 
   return (
     <section
@@ -25,8 +35,13 @@ const GameCarousel = () => {
         zIndex={"z-10"}
         width={"w-[32.563em]"}
       />
-      <CarouselTitle />
-      <Carousel />
+      {state && <CarouselTitle paragraphText={state.paragraphText} />}
+      {state !== null && (
+        <Carousel
+          images={state.imageUrls}
+          highlight={state.carouselHighlight}
+        />
+      )}
       <CarouselActions />
     </section>
   );
