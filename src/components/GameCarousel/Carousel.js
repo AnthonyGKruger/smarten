@@ -31,7 +31,7 @@ const Carousel = ({ images, highlight }) => {
   }, []);
 
   const imageClasses =
-    "m-auto xl:h-[23em] xl:w-[41em] lg:h-[20em] lg:w-[40em] md:h-[15em] md:w-[41em] h-[10.5em] w-[18em] aspect-video object-cover ";
+    "m-auto xl:h-[23em] xl:w-[41em] lg:h-[20em] lg:w-[36em] md:h-[15em] md:w-[41em] h-[10.5em] w-[18em] aspect-video object-cover ";
 
   return (
     <>
@@ -41,7 +41,7 @@ const Carousel = ({ images, highlight }) => {
       >
         <div
           className={
-            "absolute xl:left-[43.7em] xl:-top-[1.3em] lg:left-[20.5em] lg:-top-[1.3em] md:left-[15.5em]" +
+            "absolute xl:left-[43.7em] xl:-top-[1.3em] lg:left-[21.3em] lg:-top-[1.3em] md:left-[15.5em]" +
             " md:-top-[0.2em] left-1.2 top-1.5 w-[30em] md:w-auto"
           }
         >

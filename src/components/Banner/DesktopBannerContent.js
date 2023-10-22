@@ -57,7 +57,7 @@ const DesktopBannerContent = () => {
   useEffect(() => {}, []);
 
   const spanClasses =
-    "uppercase inline-flex font-extrabold lg:mt-2 md:mt-1 mt-3 banner-item lg:text-3xl md:text-2xl text-sm";
+    "uppercase inline-flex font-extrabold lg:mt-2 md:mt-1 mt-3 banner-item lg:text-2xl xl:text-3xl md:text-2xl text-sm opacity-100 isolate";
   const liClasses = "inline-flex uppercase font-extrabold ";
   // const liClasses = "inline-flex uppercase font-extrabold banner-item";
   const imgClasses =
@@ -66,7 +66,7 @@ const DesktopBannerContent = () => {
   return (
     <div
       className={
-        "lg:h-screen md:h-[30em] h-fit w-screen bg-[#3924BB] relative mix-blend-color-dodge"
+        "lg:h-[90vh] 2xl:h-[95vh] lg:-mt-3 2xl:-mt-5 md:h-[30em] h-fit w-screen bg-[#3924BB] relative mix-blend-color-dodge"
       }
       ref={ref}
     >
@@ -89,9 +89,9 @@ const DesktopBannerContent = () => {
             className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d]
           [touch-action: pan-Y] [will-change: transform] overflow-hidden p-0 inline-flex items-center gap-x-2
          2xl:w-[150em] xl:w-[200vw]  lg:w-[80em] w-[60em] lg:-ml-[8em] md:w-[60em] md:-ml-[6em] -ml-[12em]
-          xl:h-[5.625em] lg:h-[4.375em] h-[4.375em] absolute 2xl:mt-[56.5em] xl:mt-[95vh] lg:mt-[39.75em] md:mt-[28em]
+          xl:h-[5.625em] lg:h-[4.375em] h-[4.375em] absolute 2xl:mt-[55.5em] xl:mt-[85vh] lg:mt-[39.75em] md:mt-[28em]
            mt-[39.5em] -skew-y-2 text-white border-2 border-slate-700  bg-gradient-to-t  from-[#000000] to-slate-700
-           backdrop-blur-[25px] isolate z-50"
+           backdrop-blur-[25px] isolate z-50 opacity-90"
           >
             {state !== null &&
               state.tiltedBannerText.map((text, idx) => {
@@ -155,7 +155,7 @@ const DesktopBannerContent = () => {
           src={state.imageUrl}
           alt={"banner"}
           className={
-            "lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:-mt-2 lg:-mt-2  object-cover object-right -z-50 relative hidden md:block"
+            "lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:-mt-2 lg:-mt-2  object-cover object-right-top -z-50 relative hidden md:block"
           }
         />
       )}
