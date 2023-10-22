@@ -36,7 +36,12 @@ const GameCarousel = () => {
         width={"w-[32.563em]"}
       />
       {state && <CarouselTitle paragraphText={state.paragraphText} />}
-      {state !== null && <Carousel images={state.imageUrls} />}
+      {state !== null && (
+        <Carousel
+          images={state.imageUrls}
+          highlight={state.carouselHighlight}
+        />
+      )}
       <CarouselActions />
     </section>
   );

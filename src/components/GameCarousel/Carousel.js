@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Glide from "@glidejs/glide";
 
-const Carousel = ({ images }) => {
+const Carousel = ({ images, highlight }) => {
   useEffect(() => {
     const slider = new Glide(".glide-05", {
       type: "carousel",
@@ -41,12 +41,12 @@ const Carousel = ({ images }) => {
       >
         <div
           className={
-            "absolute xl:left-[43em] xl:-top-[1.3em] lg:left-[20.5em] lg:-top-[1.3em] md:left-[15.5em]" +
+            "absolute xl:left-[43.7em] xl:-top-[1.3em] lg:left-[20.5em] lg:-top-[1.3em] md:left-[15.5em]" +
             " md:-top-[0.2em] left-1.2 top-1.5 w-[30em] md:w-auto"
           }
         >
           <img
-            src={"/assets/carousel/carousel-highlight.png"}
+            src={highlight}
             alt={"carousel highlight"}
             // className={"h-96 w-[90em]"}
           />

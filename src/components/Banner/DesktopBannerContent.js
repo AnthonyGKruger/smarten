@@ -15,7 +15,13 @@ const DesktopBannerContent = () => {
   const isInViewPort = useIsInViewPort(ref);
   const randomId = Math.floor(Math.random() * 100) + 1;
 
+  const flag = state !== null;
+
   useEffect(() => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}banner`).then((res) => {
+      setState(res.data);
+    });
+
     if (state !== null) {
       const slider = new Glide(`.star-banner-${randomId}`, {
         type: "carousel",
@@ -46,43 +52,9 @@ const DesktopBannerContent = () => {
         slider.destroy();
       };
     }
-  }, [randomId, state]);
-  // useEffect(() => {
-  //   const slider = new Glide(`.star-banner-${randomId}`, {
-  //     type: "carousel",
-  //     autoplay: 1,
-  //     animationDuration: 5000,
-  //     animationTimingFunc: "linear",
-  //     perView: 3,
-  //     classes: {
-  //       nav: {
-  //         active: "[&>*]:bg-wuiSlate-700",
-  //       },
-  //     },
-  //     breakpoints: {
-  //       1024: {
-  //         perView: 2,
-  //       },
-  //       640: {
-  //         perView: 2,
-  //         // gap: 10,
-  //       },
-  //       325: {
-  //         perView: 1,
-  //       },
-  //     },
-  //   }).mount();
-  //
-  //   return () => {
-  //     slider.destroy();
-  //   };
-  // }, [randomId]);
+  }, [flag]);
 
-  useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BACKEND_URL}banner`).then((res) => {
-      setState(res.data.tiltedBannerText);
-    });
-  }, []);
+  useEffect(() => {}, []);
 
   const spanClasses =
     "uppercase inline-flex font-extrabold lg:mt-2 md:mt-1 mt-3 banner-item lg:text-3xl md:text-2xl text-sm";
@@ -122,9 +94,10 @@ const DesktopBannerContent = () => {
            backdrop-blur-[25px] isolate z-50"
           >
             {state !== null &&
-              state.map((text) => {
+              state.tiltedBannerText.map((text, idx) => {
                 return (
                   <StarBannerItem
+                    key={idx}
                     text={text}
                     imgClasses={imgClasses}
                     liClasses={liClasses}

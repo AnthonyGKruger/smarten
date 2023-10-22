@@ -5,44 +5,46 @@ import axios from "axios";
 const Footer = () => {
   const [state, setState] = useState(null);
 
-  useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}footer`)
-      .then((res) => setState(res.data));
-  }, []);
-
   const randomId = Math.floor(Math.random() * 100) + 1;
 
-  useEffect(() => {
-    const slider = new Glide(`.star-banner-${randomId}`, {
-      type: "carousel",
-      autoplay: 1,
-      animationDuration: 5000,
-      animationTimingFunc: "linear",
-      perView: 3,
-      classes: {
-        nav: {
-          active: "[&>*]:bg-wuiSlate-700",
-        },
-      },
-      breakpoints: {
-        1024: {
-          perView: 2,
-        },
-        640: {
-          perView: 2,
-          // gap: 10,
-        },
-        325: {
-          perView: 1,
-        },
-      },
-    }).mount();
+  const flag = state !== null;
 
-    return () => {
-      slider.destroy();
-    };
-  }, [randomId]);
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}footer`).then((res) => {
+      setState(res.data);
+    });
+
+    if (state != null) {
+      const slider = new Glide(`.star-banner-${randomId}`, {
+        type: "carousel",
+        autoplay: 1,
+        animationDuration: 5000,
+        animationTimingFunc: "linear",
+        perView: 3,
+        classes: {
+          nav: {
+            active: "[&>*]:bg-wuiSlate-700",
+          },
+        },
+        breakpoints: {
+          1024: {
+            perView: 2,
+          },
+          640: {
+            perView: 2,
+            // gap: 10,
+          },
+          325: {
+            perView: 1,
+          },
+        },
+      }).mount();
+
+      return () => {
+        slider.destroy();
+      };
+    }
+  }, [flag]);
 
   const spanClasses =
     "uppercase inline-flex font-extrabold lg:mt-2 md:mt-3 mt-3 banner-item lg:text-3xl md:text-2xl text-sm";
@@ -79,46 +81,21 @@ const Footer = () => {
           xl:h-[5.625em] lg:h-[4.375em] h-[4.375em]
            text-white border-t-1 border-slate-700  bg-gradient-to-b from-[#352770] to-transparent backdrop-blur-[1.563em] isolate z-50 star-banner"
           >
-            <li className={liClasses}>
-              <img
-                src={
-                  "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
-                }
-                alt={"star"}
-                className={imgClasses}
-              />{" "}
-              <span className={spanClasses}>Gaming Spanning</span>
-            </li>
-            <li className={liClasses}>
-              <img
-                src={
-                  "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
-                }
-                alt={"star"}
-                className={imgClasses}
-              />{" "}
-              <span className={spanClasses}>Action - Packed</span>
-            </li>
-            <li className={liClasses}>
-              <img
-                src={
-                  "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
-                }
-                alt={"star"}
-                className={imgClasses}
-              />{" "}
-              <span className={spanClasses}> Mind - Bending</span>
-            </li>
-            <li className={liClasses}>
-              <img
-                src={
-                  "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
-                }
-                alt={"star"}
-                className={imgClasses}
-              />{" "}
-              <span className={spanClasses}>Collection og games</span>
-            </li>
+            {state !== null &&
+              state.tiltedBannerText.map((text, idx) => {
+                return (
+                  <li key={idx} className={liClasses}>
+                    <img
+                      src={
+                        "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
+                      }
+                      alt={"star"}
+                      className={imgClasses}
+                    />{" "}
+                    <span className={spanClasses}>{text}</span>
+                  </li>
+                );
+              })}
           </ul>
         </div>
       </div>
@@ -153,141 +130,44 @@ const Footer = () => {
                 </span>
               </a>
 
-              <p className={"text-lg p-3"}>
-                A well-designed gaming header often incorporates elements such
-                as game characters, iconic symbols, vibrant colors, and dynamic
-                visuals .
-              </p>
+              {state !== null && (
+                <p className={"text-lg p-3"}>{state.paragraphText}</p>
+              )}
             </div>
-            <nav
-              className="col-span-2 md:col-span-4 lg:col-span-2"
-              aria-labelledby="footer-product-5-logo"
-            >
-              <h3
-                className="mb-6 text-base font-extrabold uppercase font-lato text-white"
-                id="footer-product-5-logo"
-              >
-                Company
-              </h3>
-              <ul>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
+
+            {state !== null &&
+              state.navs.map((nav, idx) => {
+                return (
+                  <nav
+                    key={idx}
+                    className="col-span-2 md:col-span-4 lg:col-span-2"
+                    aria-labelledby="footer-product-5-logo"
                   >
-                    Products
-                  </a>
-                </li>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
-                  >
-                    Apps & Games
-                  </a>
-                </li>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
-                  >
-                    Features
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <nav
-              className="col-span-2 md:col-span-4 lg:col-span-2"
-              aria-labelledby="footer-docs-5-logo"
-            >
-              <h3
-                className="mb-6 text-base font-extrabold font-lato uppercase text-white"
-                id="footer-docs-5-logo"
-              >
-                help
-              </h3>
-              <ul>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
-                  >
-                    Support
-                  </a>
-                </li>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
-                  >
-                    About
-                  </a>
-                </li>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
-                  >
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <nav
-              className="col-span-2 md:col-span-4 lg:col-span-2"
-              aria-labelledby="footer-about-5-logo"
-            >
-              <h3
-                className="mb-6 text-base font-extrabold font-lato text-white uppercase"
-                id="footer-about-5-logo"
-              >
-                Resources
-              </h3>
-              <ul>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
-                  >
-                    Youtube Playlist
-                  </a>
-                </li>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
-                  >
-                    How To - Blog
-                  </a>
-                </li>
-                <li className="mb-2 leading-6">
-                  <a
-                    href="https://ezdev.solutions"
-                    className="transition-colors duration-300 text-lg cursor-pointer"
-                    target={"_blank"}
-                    rel={"noreferrer"}
-                  >
-                    Terms & Conditions
-                  </a>
-                </li>
-              </ul>
-            </nav>
+                    <h3
+                      className="mb-6 text-base font-extrabold uppercase font-lato text-white"
+                      id="footer-product-5-logo"
+                    >
+                      {nav.title}
+                    </h3>
+                    <ul>
+                      {nav.links.map((link, idx) => {
+                        return (
+                          <li key={idx} className="mb-2 leading-6">
+                            <a
+                              href="https://ezdev.solutions"
+                              className="transition-colors duration-300 text-lg cursor-pointer"
+                              target={"_blank"}
+                              rel={"noreferrer"}
+                            >
+                              {link}
+                            </a>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </nav>
+                );
+              })}
           </div>
         </div>
       </div>
@@ -311,6 +191,37 @@ const Footer = () => {
                 </div>
               );
             })}
+          <div className={"grid sm:hidden"}>
+            <div className="grid grid-cols-3 gap-6 ">
+              <div className="col-span-4">
+                <div className={"grid grid-cols-4 gap-2"}>
+                  {state !== null &&
+                    state.socialIcons.map((socialIcon, idx) => {
+                      return (
+                        <div
+                          key={idx}
+                          className={"col-span-1"}
+                          onClick={() => {
+                            window.open(socialIcon.url, "_blank");
+                          }}
+                        >
+                          <img
+                            src={socialIcon.imageUrl}
+                            alt={"social-icon"}
+                            className={
+                              "hover:scale-105 transition-all delay-100 cursor-pointer"
+                            }
+                            onClick={() => {
+                              window.open(socialIcon.url, "_blank");
+                            }}
+                          />
+                        </div>
+                      );
+                    })}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -319,7 +230,7 @@ const Footer = () => {
           "absolute xl:bottom-8 bottom-2 xl:left-20 left-10 font-lato xl:text-xs text-sm "
         }
       >
-        `{" "}
+        {" "}
         <div className="container xl:px-6 m-auto grid grid-cols-3 gap-2">
           <div className={"xl:col-span-1 col-span-3 hidden sm:grid"}>
             <div className="grid grid-cols-3 gap-6 ">

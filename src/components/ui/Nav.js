@@ -149,7 +149,9 @@ const Nav = () => {
                 className={`${navItemClasses} lg:invisible visible`}
               >
                 <img
-                  src={"/assets/nav/cart-icon.svg"}
+                  src={
+                    "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/nav/cart-icon.svg"
+                  }
                   alt={"cart icon"}
                   className={"h-4 lg:invisible visible"}
                 />
@@ -170,7 +172,9 @@ const Nav = () => {
               className="relative inline-flex h-10 w-10 items-center justify-center text-lg invisible lg:visible"
             >
               <img
-                src={"/assets/nav/cart-icon.svg"}
+                src={
+                  "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/nav/cart-icon.svg"
+                }
                 alt={"cart icon"}
                 className={"h-4 invisible lg:visible"}
               />

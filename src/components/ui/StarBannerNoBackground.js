@@ -48,7 +48,7 @@ const StarBannerNoBackground = () => {
   }, [randomId, state]);
 
   const spanClasses =
-    "uppercase inline-flex font-extrabold lg:mt-1 md:mt-2 mt-5 banner-item";
+    "uppercase inline-flex font-extrabold lg:mt-1 md:mt-2 mt-6 banner-item";
   const liClasses = "inline-flex uppercase font-extrabold banner-item";
   const imgClasses = "h-1/2 mr-6 md:mt-0 mt-3 justify-center items-center";
 
@@ -62,8 +62,9 @@ const StarBannerNoBackground = () => {
           2xl:gap-x-28 xl:h-[3.125em] md:w-[120vw] w-[350vw] 2xl:w-[187.5em] 2xl:-ml-0 md:-ml-[12.5em] ml-[50vw] mt-16 text-white lg:text-3xl
            md:text-lg z-50 text-sm"
           >
-            {state.map((text) => (
+            {state.map((text, idx) => (
               <StarBannerItem
+                key={idx}
                 text={text}
                 spanClasses={spanClasses}
                 liClasses={liClasses}

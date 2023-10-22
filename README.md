@@ -19,6 +19,19 @@ Task is to build the an SPA based on the [following design](https://www.figma.co
 - ReactJS
 - TailwindCSS
 - GlideJS
+- Axios
+- AWS S3 - backend url: https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/smartenup-backend.vercel.app/
+- ExpressJS - backend url: https://smartenup-backend.vercel.app/
+
+### Routes available:
+
+- https://smartenup-backend.vercel.app/
+- https://smartenup-backend.vercel.app/banner
+- https://smartenup-backend.vercel.app/cta
+- https://smartenup-backend.vercel.app/testimonials
+- https://smartenup-backend.vercel.app/filters
+- https://smartenup-backend.vercel.app/footer
+- https://smartenup-backend.vercel.app/game-carousel
 
 ### Prerequisites:
 

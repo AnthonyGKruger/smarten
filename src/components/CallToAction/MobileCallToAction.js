@@ -1,8 +1,8 @@
 import GradientBorderButton from "../ui/GradientBorderButton";
 import GradientText from "../ui/GradientText";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import useIsInViewPort from "../../hooks/useIsInViewPort";
-import axios from "axios";
+import StarBannerNoBackground from "../ui/StarBannerNoBackground";
 
 const MobileCallToAction = ({ data }) => {
   const ref = useRef();
@@ -57,59 +57,7 @@ const MobileCallToAction = ({ data }) => {
         </div>
       </div>
 
-      <div
-        className={`inline-flex items-center gap-x-14 h-[3.125em] w-[124.313em] -ml-[18.75em] mt-16 text-white  overflow-hidden`}
-      >
-        <div className=" inline-flex ">
-          <img
-            src={
-              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
-            }
-            alt={"star"}
-            className={"h-1/4 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold text-[1.125rem]"}>
-            Gaming Spanning
-          </span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={
-              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
-            }
-            alt={"star"}
-            className={"h-1/4 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold text-[1.125rem]"}>
-            Action - Packed
-          </span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={
-              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
-            }
-            alt={"star"}
-            className={"h-1/4 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold text-[1.125rem]"}>
-            {" "}
-            Mind - Bending
-          </span>
-        </div>
-        <div className=" inline-flex ">
-          <img
-            src={
-              "https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/Star+1.svg"
-            }
-            alt={"star"}
-            className={"h-1/4 mr-6"}
-          />{" "}
-          <span className={"uppercase font-extrabold text-[1.125rem]"}>
-            Collection og games
-          </span>
-        </div>
-      </div>
+      <StarBannerNoBackground />
     </section>
   );
 };
