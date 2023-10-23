@@ -30,7 +30,7 @@ const FiltersGrid = () => {
   }, []);
 
   return (
-    <section className={"py-10"} ref={ref}>
+    <div className={"py-10"} ref={ref}>
       <div className="container px-6 m-auto">
         <div className="grid grid-cols-4 gap-6 gap-y-8 md:grid-cols-8 lg:grid-cols-12">
           {filterCards}
@@ -45,7 +45,7 @@ const FiltersGrid = () => {
         zIndex={"z-10"}
         width={"w-[32.563em]"}
       />
-    </section>
+    </div>
   );
 };
 

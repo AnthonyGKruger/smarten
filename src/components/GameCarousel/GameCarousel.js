@@ -35,7 +35,7 @@ const GameCarousel = () => {
         zIndex={"z-10"}
         width={"w-[32.563em]"}
       />
-      {state && <CarouselTitle paragraphText={state.paragraphText} />}
+      {state && <CarouselTitle />}
       {state !== null && (
         <Carousel
           images={state.imageUrls}

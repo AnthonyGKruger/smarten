@@ -151,13 +151,15 @@ const DesktopBannerContent = () => {
       </div>
 
       {state && (
-        <img
-          src={state.imageUrl}
-          alt={"banner"}
-          className={
-            "lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:-mt-2 lg:-mt-2  object-cover object-right-top -z-50 relative hidden md:block"
-          }
-        />
+        <figure>
+          <img
+            src={state.imageUrl}
+            alt={"banner"}
+            className={
+              "lg:w-screen lg:h-full md:h-full md:w-full h-4/6 w-full md:aspect-video md:object-cover md:-mt-2 lg:-mt-2  object-cover object-right-top -z-50 relative hidden md:block"
+            }
+          />
+        </figure>
       )}
 
       {state && (

@@ -12,7 +12,6 @@ const MobileBannerContent = ({ text, img }) => {
       className="overflow-hidden bg-[#000000] text-white pt-20 md:hidden"
     >
       <div className="bg-[#000000]">
-        {/*<div className="p-6">*/}
         <header className="absolute p-6">
           <div className={"w-full"}>
             <h1

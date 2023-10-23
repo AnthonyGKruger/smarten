@@ -108,9 +108,9 @@ const Footer = () => {
               aria-labelledby="footer-header"
             >
               <a
-                id="logo"
-                aria-label="logo"
-                aria-current="page"
+                id="footer logo"
+                aria-label="footer logo"
+                aria-current="footer"
                 className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1 mb-3 cursor-pointer"
                 href="https://ezdev.solutions"
                 target={"_blank"}
@@ -141,12 +141,9 @@ const Footer = () => {
                   <nav
                     key={idx}
                     className="col-span-2 md:col-span-4 lg:col-span-2"
-                    aria-labelledby="footer-product-5-logo"
+                    aria-labelledby={`${nav.title} - navigation title`}
                   >
-                    <h3
-                      className="mb-6 text-base font-extrabold uppercase font-lato text-white"
-                      id="footer-product-5-logo"
-                    >
+                    <h3 className="mb-6 text-base font-extrabold uppercase font-lato text-white">
                       {nav.title}
                     </h3>
                     <ul>

@@ -45,11 +45,13 @@ const Carousel = ({ images, highlight }) => {
             " md:-top-[0.2em] left-1.2 top-1.5 w-[30em] md:w-auto"
           }
         >
-          <img
-            src={highlight}
-            alt={"carousel highlight"}
-            // className={"h-96 w-[90em]"}
-          />
+          <figure>
+            <img
+              src={highlight}
+              alt={"carousel highlight"}
+              // className={"h-96 w-[90em]"}
+            />
+          </figure>
         </div>
 
         <div className="overflow-hidden" data-glide-el="track">
@@ -60,11 +62,13 @@ const Carousel = ({ images, highlight }) => {
             {images.map((image, idx) => {
               return (
                 <li key={idx}>
-                  <img
-                    src={image}
-                    className={imageClasses}
-                    alt={"favourite games"}
-                  />
+                  <figure>
+                    <img
+                      src={image}
+                      className={imageClasses}
+                      alt={"favourite games"}
+                    />
+                  </figure>
                 </li>
               );
             })}

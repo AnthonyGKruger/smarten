@@ -61,7 +61,7 @@ const Nav = () => {
 
           <ul
             role="menubar"
-            aria-label="Select page"
+            aria-label="navigation"
             className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-slate-600/50 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
               isToggleOpen
                 ? "visible opacity-100 backdrop-blur-sm pt-20"
@@ -181,7 +181,7 @@ const Nav = () => {
               <div className="absolute xl:top-4 xl:-right-1 lg:-right-1.5  mr-2">
                 <img
                   src="https://smartenup-figma-test.s3.eu-central-1.amazonaws.com/assets/nav/Ellipse+1.svg"
-                  alt="Badge 1"
+                  alt="cart badge"
                   className="xl:h-1.5 xl:w-1.5 mr-2 invisible lg:visible"
                 />
               </div>
